@@ -25,7 +25,7 @@ const Home = () => {
                 <div className="flex flex-col items-center mb-36">
                     <h2 className="text-4xl 2xl:text-5xl leading-20 font-bold tracking-widest uppercase">About Me</h2>
                     <div className="h-2 w-10 bg-gradient1 rounded-xl my-4"></div>
-                    <p className="text-center text-lg md:text-xl 2xl:text-2xl leading-7 max-w-[55rem] m-auto">Here you will find more information about my current skills and technologys I use and a random project</p>
+                    <p className="text-center text-lg md:text-xl 2xl:text-2xl leading-7 max-w-[55rem] m-auto">Here you will find more information about my current skills and technologies I use and a random project</p>
                 </div>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-40">
                     <div>
