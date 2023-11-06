@@ -62,6 +62,6 @@
     "tools": ["vscode", "vite", "plesk"],
     "buttons": {
         "project": "https://fabian-kleine.dev",
-        "github": "https://github.com/Fabian-Kleine"
+        "github": "https://github.com/Fabian-Kleine/portfolio-page"
     }
 }
