@@ -13,7 +13,7 @@ const Projects = () => {
                     {projects.map((project) =>
                         <div className="bg-[#242424] mb-4 bg-opacity-60 border-[#242424] border-2 w-full xl:w-1/2 rounded-md p-2">
                             <a href={"/project/" + project.filename}>
-                                <h2 className="text-left px-2 pt-2 font-bold text-2xl">{project.title}</h2>
+                                <h2 className="text-left px-2 pt-2 font-bold text-2xl line-clamp-1">{project.title}</h2>
                                 <div className="flex flex-wrap px-2 my-2 xl:my-0">
                                     <TechnologieBadge technologies={project.technologies} type={"badge"} />
                                 </div>
