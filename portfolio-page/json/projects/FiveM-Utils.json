@@ -1,7 +1,7 @@
 {
-    "title": "Fivem Automatic Start And Vehicle List",
-    "filename": "Fivem-Automatic-Start-And-Vehicle-List",
-    "overview": "These two python files can significantly speed up the process of building a FiveM Server.<br/>ensure.py lists everything that needs to be started into output.txt ith just the input of the resources directory.<br/>getVehicles.py creates a list of all installed vehicles with just the input of the resources directory and stores them in vehicles.text. This can be useful for the vMenu spawnlist etc..",
+    "title": "FiveM Utils",
+    "filename": "FiveM-Utils",
+    "overview": "These python files can significantly speed up the process of building a FiveM Server.<br/>ensure.py lists everything that needs to be started into output.txt ith just the input of the resources directory.<br/>getVehicles.py creates a list of all installed vehicles with just the input of the resources directory and stores them in vehicles.text. This can be useful for the vMenu spawnlist etc..",
     "content": [
         {
             "type": "text",
@@ -31,6 +31,6 @@
     "technologies": ["python"],
     "tools": ["vscode"],
     "buttons": {
-        "github": "https://github.com/Fabian-Kleine/Fivem-Automatic-Start-And-Vehicle-List"
+        "github": "https://github.com/Fabian-Kleine/FiveM-Utils"
     }
 }
