@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Source Sans 3", sans-serif;
+}
+
+#root {
+  /* max-width: 1280px; */
+  margin: 0;
+  text-align: center;
+}
+
+.bg-pattern {
+  background-image: url(/prism.png);
+  background-color: #353535;
+  background-repeat: repeat;
+}
+
+.bg-gradient1 {
+  background: linear-gradient(to bottom right, #1e96fc, #f72585);
+}
+
+.bg-gradient2 {
+  background: linear-gradient(to bottom right, #f72585, #fb5607);
+}
+
+.bg-gradient3 {
+  background: linear-gradient(to bottom right, #f72585, #ffd60a);
+}
+
+.box-shadow-gray-top{
+  box-shadow: 0px -15px 15px -5px #353535;
+  -webkit-box-shadow: 0px -15px 15px -5px #353535;
+}
+
+.text-gradient, .text-gradient-hover:hover {
+  background: linear-gradient(to bottom right, #1e96fc, #f72585, #fb5607);
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textShine 5s ease-in-out infinite alternate;
+}
+
+@keyframes textShine {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.mouse {
+  width: 25px;
+  height: 40px;
+  border: 2px solid #fff;
+  border-radius: 60px;
+  position: relative;
+  overflow: hidden;
+}
+
+.mouse::before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  top: 7px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  border-radius: 50%;
+  opacity: 1;
+  animation: wheel 1.3s infinite;
+  -webkit-animation: wheel 1.3s infinite;
+}
+
+@keyframes wheel {
+  to {
+      opacity: 0;
+      top: 27px
+  }
+}
+
+@-webkit-keyframes wheel {
+  to {
+      opacity: 0;
+      top: 27px
+  }
+}
+
+.br-margin br{
+  display: block;
+  margin: 10px 0;
+  line-height: 22px;
+  content: " ";
+}

@@ -1,0 +1,36 @@
+{
+    "title": "Fivem Automatic Start And Vehicle List",
+    "filename": "Fivem-Automatic-Start-And-Vehicle-List",
+    "overview": "These two python files can significantly speed up the process of building a FiveM Server.<br/>ensure.py lists everything that needs to be started into output.txt ith just the input of the resources directory.<br/>getVehicles.py creates a list of all installed vehicles with just the input of the resources directory and stores them in vehicles.text. This can be useful for the vMenu spawnlist etc..",
+    "content": [
+        {
+            "type": "text",
+            "title": "What Is FiveM?",
+            "text": "&#8220; FiveM is a modification for [the Video Game] Grand Theft Auto V enabling you to play multiplayer on customized dedicated servers, powered by Cfx.re. &#8221; — <a href='https://fivem.net' target='_blank' class='underline font-bold'>fivem.net</a>"
+        },
+        {
+            "type": "text",
+            "title": "Replacing Hard Work With Automation",
+            "text": "The process of installing mods and resources for your own FiveM server can be very stressful because very mod has to be individually started and every installed vehicle mod has to be added to the vMenu spawnlist.<br />The Tool I programmed allows you to get these start commands and the vehicleslist just by entering the location of the resources folder of your FiveM server. These can than simply be copied over from the output textfiles to the files where they belong."
+        },
+        {
+            "type": "text",
+            "title": "How Does It Work",
+            "text": "The ensure.py file loops through every directory and adds it to a list which is later written to the output.txt file. Some folders that are not important are ignored by default.<br />The getVehicles.py file is a bit more complicated. It has to read the XML files where the vehicles are specified. In the XML files it reads the key value <i>modelName</i> which we need to later spawn the vehicle in Game. As in enure.py we need to loop through the directorys."
+        },
+        {
+            "type": "list",
+            "title": "What Did I Learn?",
+            "list": [
+                "Basics of Python",
+                "Writing Outputs to files in Python",
+                "How XML works"
+            ]
+        }
+    ],
+    "technologies": ["python"],
+    "tools": ["vscode"],
+    "buttons": {
+        "github": "https://github.com/Fabian-Kleine/Fivem-Automatic-Start-And-Vehicle-List"
+    }
+}

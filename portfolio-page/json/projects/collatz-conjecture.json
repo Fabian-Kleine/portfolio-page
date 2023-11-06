@@ -1,0 +1,44 @@
+{
+    "title": "Collatz Conjecture",
+    "filename": "collatz-conjecture",
+    "overview": "Collatz Conjecture describes a mathematical problem which works as follows. You start with a random number, if that number is even you devide it by 2, if it is odd you multiply it by 3 and add 1. By applying these formulas onto the outcome of the previous function you will eventually end up at a loop of 4, 2, and 1.<br /> This Webapp calculates how many steps it takes to reach 1 and displayes every intermediate step in a table and a graph.",
+    "content": [
+        {
+            "type": "text",
+            "title": "How It Works",
+            "text": "The main <i>collatzConjecture</i> function first checks if the input is valid meaning x ∈ N. After that it loops through a while loop until x == 1 or x == 0 and determines inside the loop what formula to apply depending on if the x is evene or odd. After that it pushs the outcome to the <i>nums</i> array.<br />When this is done the <i>nums</i> array is passed to the <i>addToTable</i> and <i>addToGraph</i> functions to render the data in the table and the graph."
+        },
+        {
+            "type": "code",
+            "language": "javascript",
+            "code": "function collatzConjecture(x){\n    /* ↑ check if input is valid ↑ */\n    var nums = [x];\n    while(x != 1 || x != 0){\n        if(x == 1 || x == 0){\n            break\n        }\n        if(checkIfOdd(x) == 1){\n            x = 3*x+1\n        }else if(checkIfOdd(x) == 0){\n            x = x/2\n        }else{\n            console.error('failed testing if odd or even');\n        }\n        nums.push(x)\n    }\n\n    addToTable(nums);\n    addToGraph(nums);\n}\n\nfunction checkIfOdd(num){\n    return num % 2;\n}",
+            "caption": "Main <i>collatzConjecture</i> function and the <i>checkIfOdd</i> function in collatzConjecture.js"
+        },
+        {
+            "type": "img",
+            "src": "/Collatz-Conjecture-Graph.PNG",
+            "title": "Graph",
+            "text": "The graph is great for showing how high the numbers can get. For this example I used 127 as input and the highest number was 4372.<br />The Graph is programmed with the JavaScript library Chart.js and uses the <i>line</i> type. The <i>addToGraph</i> function looks like this:"
+        },
+        {
+            "type": "code",
+            "language":"javascript",
+            "code": "var chart;\n\nfunction addToGraph(nums){\n    if(chart) chart.destroy();\n    \n    chart = new Chart(\n        document.getElementById('graph'),\n        {\n            type: 'line',\n            data: {\n                labels: nums.map((num, index) => index + 1),\n                datasets: [\n                    {\n                        label: 'Numbers',\n                        data: nums\n                    }\n                ]\n            }\n        }\n    )\n}",
+            "text": "In the first line of the function the previous chart has to be destroyed because otherwise the new one wouldn't render."
+        },
+        {
+            "type": "list",
+            "title": "What Did I Learn?",
+            "list": [
+                "Using while loops",
+                "Using Chart.js"
+            ]
+        }
+    ],
+    "technologies": ["html", "css", "js", "bootstrap"],
+    "tools": ["vscode"],
+    "buttons": {
+        "project": "https://jsapps.fabian-kleine.dev/Collatz-Conjecture",
+        "github": "https://github.com/Fabian-Kleine/Collatz-Conjecture"
+    }
+}

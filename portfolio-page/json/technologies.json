@@ -1,0 +1,93 @@
+{
+    "html":{
+        "icon": "/technologie-icons/icons8-html.svg",
+        "name": "HTML",
+        "color": "#FF6D00",
+        "hover": "#FF6D00"
+    },
+    "css":{
+        "icon": "/technologie-icons/icons8-css.svg",
+        "name": "CSS",
+        "color": "#0398E0",
+        "hover": "#0398E0"
+    },
+    "js":{
+        "icon": "/technologie-icons/icons8-js.svg",
+        "name": "JavaScript",
+        "color": "#FAD200",
+        "hover": "#FAD200"
+    },
+    "node":{
+        "icon": "/technologie-icons/icons8-nodejs.svg",
+        "name": "Node.js",
+        "color": "#026e00",
+        "hover": "#026e00"
+    },
+    "react":{
+        "icon": "/technologie-icons/icons8-react.png",
+        "name": "React",
+        "color": "#53C1DE",
+        "hover": "#53C1DE"
+    },
+    "next":{
+        "icon": "/technologie-icons/icons8-nextjs.svg",
+        "name": "Next.js",
+        "color": "#2F2F2F",
+        "hover": "#E7E7E7" 
+    },
+    "MongoDB":{
+        "icon": "/technologie-icons/icons8-mongodb.png",
+        "name": "MongoDB",
+        "color": "#00684A", 
+        "hover": "#00684A" 
+    },
+    "tailwindcss":{
+        "icon": "/technologie-icons/icons8-tailwindcss.svg",
+        "name": "tailwindcss",
+        "color": "#00A9BD", 
+        "hover": "#00A9BD"
+    },
+    "bootstrap": {
+        "icon": "/technologie-icons/icons8-bootstrap.svg",
+        "name": "Bootstrap",
+        "color": "#7C4DFF", 
+        "hover": "#7C4DFF"
+    },
+    "python": {
+        "icon": "/technologie-icons/icons8-python.svg",
+        "name": "Python",
+        "color": "#0277BD",
+        "hover": "#FFC107"
+    },
+
+    "vscode":{
+        "icon": "/technologie-icons/icons8-vscode.svg",
+        "name": "VS Code",
+        "color": "#0285CD",
+        "hover": "#0285CD"
+    },
+    "google": {
+        "icon": "/technologie-icons/icons8-google.svg",
+        "name": "Google OAuth",
+        "color": "#4081EC",
+        "hover": "#4081EC"
+    },
+    "discord": {
+        "icon": "/technologie-icons/icons8-discord.svg",
+        "name": "Discord OAuth",
+        "color": "#899BFA",
+        "hover": "#899BFA"
+    },
+    "plesk": {
+        "icon": "/technologie-icons/plesk_logo_negative_SQUARE_rgb.png",
+        "name": "Plesk",
+        "color": "#384859",
+        "hover": "#384859"
+    },
+    "vite": {
+        "icon": "/technologie-icons/icons8-vite.svg",
+        "name": "Vite",
+        "color": "#746BD6",
+        "hover": "#746BD6"
+    }
+}

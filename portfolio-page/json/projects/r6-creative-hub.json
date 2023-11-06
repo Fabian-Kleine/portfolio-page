@@ -1,0 +1,81 @@
+{
+    "title": "R6 Creative Hub",
+    "filename": "r6-creative-hub",
+    "overview": "<b>R6 Creative Hub</b> is a platform to share ideas and concepts for the Video Games Tom Clancy’s Rainbow Six Siege and Tom Clancy’s Rainbow Six Extraction. Both Games feature a variety of Operators with special abilitys, different Events and Maps.<br />On <a href='https://r6-creative-hub.com' target='_blank' class='underline font-bold' >r6-creative-hub.com</a> the community can share their Operators including a whole Biography of the Operator, the Weapon Loadout, the Operator Icon and the Ability. Furthermore they can create Events and Maps using the <i>Map Builder</i>. Moreover it is possible to share Videoclips from YouTube through the YouTube API.<br />The Website provides Login and Registartion with Credentials, Google or Discord, a News Page, a report and commenting system and more.",
+    "content": [
+        {
+            "type": "img",
+            "title": "The UI",
+            "src": "/r6-ui.gif",
+            "text": "The UI of the Home Page and in general was heavily inspired by the old UI of Tom Clancy’s Rainbow Six Siege. The UI elements on the left of the original design have been replaced with social media links, an Image Slider that shows the features of the website and a box at the bottom that rotates between the most recent news. The most important part of the website is to create something so this goes on the big blue button.<br />As in the original design a video is playing in the background. In the top left corner a counter for the users of the website and the YouTube Subscribers can be found which replaces the original number of renown and R6 credits. The Hamburger Menu for more navigation options and for mobile devices is located to the right of these numbers. The original section that shows your squad has been replaced by an About Section which opens on hover and reveals a text which describes what you can do on the website.<br />The other pages use a simpler design. Most pages use a background with a repeating image. Some pages like the <a href='https://r6-creative-hub.com/auth/login' target='_blank' class='underline font-bold' >login</a> or <a href='https://r6-creative-hub.com/auth/register' target='_blank' class='underline font-bold' >register</a> page use a video as background."
+        },
+        {
+            "type": "img",
+            "src": "/r6-operators.PNG",
+            "text": "For the <a href='https://r6-creative-hub.com/ideas/operator' target='_blank' class='underline font-bold' >Operator Page</a> a more special design was needed as this is the most used feature. The cards have a special hover effect and by clicking on the information icon in the top right corner more information about the Operator is revealed. The <i>Create Your Own Operator</i> function has been put into it's own card to fit into the design."
+        },
+        {
+            "type": "text",
+            "title": "The Operator Builder",
+            "text": "The Operator Builder is a multipage form which lets you create your operator as you want to. The pages are structured as follows: <i>General</i> (Biography of the Operator), <i>Ability</i> (describe the ability and upload the icon), <i>Primary Weapons</i>, <i>Secondary Weapons</i>, <i>Gadgets</i>, <i>Final</i> (See the final Operator) as it would be displayed on the page.<br />The data is stored in sessionStorage in between the pages. On the final page the data is sent to the backend with AJAX."
+        }, 
+        {
+            "type": "code",
+            "language": "javascript",
+            "code": "function buttonNext6(){\n    const url = '/post/operator';\n    const data = {\n        id: sessionStorage.getItem('operatorId'),\n        name: sessionStorage.getItem('name'),\n        /* rest of data */\n    }\n    $.post(url,data,function(data,status){\n        console.log(`${data} and status is ${status}`)\n    })\n    .then(\n    sessionStorage.removeItem('operatorId'), \n    sessionStorage.removeItem('name'), \n    /* rest of sessionStorage */\n    )\n    .then(window.location.replace('/ideas/operator'))\n}",
+            "caption": "How the data is handled on the client side and sent to the backend with AJAX"
+        },
+        {
+            "type": "code",
+            "language": "javascript",
+            "title": "Backend - Handling Of Received Data",
+            "code": "const router = require('express').Router();\nconst bodyParser = require('body-parser');\nconst urlencodedParser = bodyParser.urlencoded({ extended: false });\nconst jwt_decode = require('jwt-decode');\nconst verify = require('./verifyToken');\nconst User = require('../model/User');\n\n/* Model */\nconst Operator = require('../model/Operator');\n\nrouter.post('/operator', urlencodedParser, async (req,res) => {\n    const token = req.cookies['jwt'];\n    const decoded = jwt_decode(token);\n    const user = await User.findById(decoded._id, '_id name');\n    const operator = new Operator({\n        user: decoded._id,\n        nickname: req.body.name.toLowerCase(),\n        /* rest of data */\n    });\n    const savedOperator = await operator.save();\n    console.log(`${user.name} created an operator named ${operator.nickname}`);\n});",
+            "text": "The data is send to an express API where it is inserted into the <i>Operator</i> Model which is defined with the npm package mongoosEJS which makes it easier to use MongoDB. Further the User that created the Operator is determined by reading the JSON Web Token which was stored in a Cookie during the login process."
+        },
+        {
+            "type": "text",
+            "title": "Dynamic Content",
+            "text": "The dynamic content like operator data is rendered using a npm package called EJS. The file is rendered on the Backend before it is served to the client. Furthermore the package prevents that user generated content that contains html or javascript gets harmful to other users or the site itself by wraping it into a string."
+        },
+        {
+            "type": "code",
+            "language": "javascript",
+            "code": "res.render('creative/operatorCreation', {operator});",
+            "caption": "Server Function to render data with EJS"
+        },
+        {
+            "type": "code",
+            "language": "htmlbars",
+            "code": "<h2><%= operator.nickname %></h2>",
+            "caption": "Syntax of EJS"
+        },
+        {
+            "type": "img",
+            "src": "/map-editor-beta.png",
+            "title": "Map Editor",
+            "text": "The Map Editor is the newest addition to the R6 Creative Hub website. The Editor allows you to create a blueprint of a map.<br /> The Editor is programmed with the fabricjs package. Each one of the buttons on the right side creates a different element on the canvas. The following code is an example for creating a wall with fabricjs on the canvas."
+        },
+        {
+            "type": "code",
+            "language": "javascript",
+            "code": "function addWall(floor) {\n    const canvas = document.getElementById('floor' + floor).fabric;\n    var wall = new fabric.Rect({\n        width: 20,\n        height: 200,\n        left: 100,\n        top: 100,\n        fill: '#fff',\n    }).setControlsVisibility({\n        ml: false,\n        mr: false,\n        bl: false,\n        br: false,\n        tl: false,\n        tr: false,\n    })\n    wall.snapAngle = 15;\n    canvas.add(wall);\n}"
+        },
+        {
+            "type": "list",
+            "title": "What Did I Learn?",
+            "list": [
+                "Importance of Mobile friendly design",
+                "How APIs work",
+                "Hosting & DNS configuration",
+                "Storing Data in a Database",
+                "User Authentication",
+                "Handling big amounts of Data"
+            ]
+        }
+    ],
+    "technologies": ["html", "css", "js", "node", "MongoDB"],
+    "tools": ["vscode", "google", "discord", "plesk"],
+    "buttons":{
+        "project": "https://r6-creative-hub.com"
+    }
+}
