@@ -6,7 +6,7 @@
         {
             "type": "text",
             "title": "Setup",
-            "text": "The page is built using Vite + React and React-Router-DOM for the routing. The pages like <i>Home</i> or <i>Projects</i> are located in the pages folder. Components like the <i>Navbar</i> or the <i>Footer</i> are located in the components folder.<br />Static Data like the Projects are stored is JSON in the json folder which we will focus on later."
+            "text": "The page is built using Vite + React and React-Router-DOM for the routing. The pages like <i>Home</i> or <i>Projects</i> are located in the pages folder. Components like the <i>Navbar</i> or the <i>Footer</i> are located in the components folder.<br />Static Data like the Projects are stored in JSON files in the json folder which we will focus on later."
         },
         {
             "type": "code",

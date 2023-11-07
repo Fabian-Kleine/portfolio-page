@@ -6,12 +6,12 @@
         {
             "type": "text",
             "title": "How It Works",
-            "text": "The main <i>collatzConjecture</i> function first checks if the input is valid meaning x ∈ N. After that it loops through a while loop until x == 1 or x == 0 and determines inside the loop what formula to apply depending on if the x is evene or odd. After that it pushs the outcome to the <i>nums</i> array.<br />When this is done the <i>nums</i> array is passed to the <i>addToTable</i> and <i>addToGraph</i> functions to render the data in the table and the graph."
+            "text": "The main <i>collatzConjecture</i> function first checks if the input is valid meaning x ∈ N. After that it loops through a while loop until x == 1 or x == 0 and determines inside the loop what formula to apply depending on if the x is even or odd. After that it pushs the outcome to the <i>nums</i> array.<br />When this is done the <i>nums</i> array is passed to the <i>addToTable</i> and <i>addToGraph</i> functions to render the data in the table and the graph."
         },
         {
             "type": "code",
             "language": "javascript",
-            "code": "function collatzConjecture(x){\n    /* ↑ check if input is valid ↑ */\n    var nums = [x];\n    while(x != 1 || x != 0){\n        if(x == 1 || x == 0){\n            break\n        }\n        if(checkIfOdd(x) == 1){\n            x = 3*x+1\n        }else if(checkIfOdd(x) == 0){\n            x = x/2\n        }else{\n            console.error('failed testing if odd or even');\n        }\n        nums.push(x)\n    }\n\n    addToTable(nums);\n    addToGraph(nums);\n}\n\nfunction checkIfOdd(num){\n    return num % 2;\n}",
+            "code": "function collatzConjecture(x){\n    /* ↑ check if input is valid ↑ */\n    var nums = [x];\n    while(x != 1 && x != 0){\n        if(x == 1 || x == 0){\n            break\n        }\n        if(checkIfOdd(x) == 1){\n            x = 3*x+1\n        }else if(checkIfOdd(x) == 0){\n            x = x/2\n        }else{\n            console.error('failed testing if odd or even');\n        }\n        nums.push(x)\n    }\n\n    addToTable(nums);\n    addToGraph(nums);\n}\n\nfunction checkIfOdd(num){\n    return num % 2;\n}",
             "caption": "Main <i>collatzConjecture</i> function and the <i>checkIfOdd</i> function in collatzConjecture.js"
         },
         {
