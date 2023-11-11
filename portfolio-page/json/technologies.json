@@ -89,5 +89,11 @@
         "name": "Vite",
         "color": "#746BD6",
         "hover": "#746BD6"
+    },
+    "bingmaps": {
+        "icon": "/technologie-icons/bing-maps-logo-medium-white.png",
+        "name": "",
+        "color": "#008272",
+        "hover": "#008272"
     }
 }

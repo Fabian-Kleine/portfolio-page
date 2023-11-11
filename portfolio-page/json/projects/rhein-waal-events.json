@@ -1,0 +1,12 @@
+{
+    "title": "Rhein-Waal Events",
+    "filename": "rhein-waal-events",
+    "overview": "The Rhen-Waal Events Website (and planned mobile app) are a network where event organizers can publish their events. Users can then find these events based on their location, the date and several other filters.<br />The website features a page where all the events are listed based on the filters applied and a page where all events are pinned on a map. Moreover it features a login for organizers to publish their events to the network.",
+    "content": [
+
+    ],
+    "technologies": ["html", "css", "js", "next", "MongoDB", "tailwindcss"],
+    "tools": ["vscode", "bingmaps"],
+    "tags": ["js", "large", "wip"],
+    "buttons": {}
+}
