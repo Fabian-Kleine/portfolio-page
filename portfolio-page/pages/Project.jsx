@@ -38,7 +38,7 @@ const Project = () => {
                 <div className="relative top-10 min-[321px]:top-52 max-w-none md:max-w-[50vw] w-[90%]">
                     <h1 className="text-4xl xl:text-5xl leading-20 font-bold tracking-widest uppercase mb-4">{projectData.title}</h1>
                     {projectData.tags.includes("wip") && (
-                        <p className="mx-8 mt-4 text-center text-base md:text-lg 2xl:text-xl leading-7 capitalize">This project is currently under development</p>
+                        <p className="mx-8 mt-4 text-center text-base md:text-lg 2xl:text-xl leading-7 capitalize font-bold">This project is currently under development</p>
                     )}
                     <p className="mx-8 mt-12 text-center text-lg md:text-xl 2xl:text-2xl leading-7">This page contains everything about the Project <b>{projectData.title}</b> which includes the Project Overview, Tools Used, Code Examples, What I Learned From It and more</p>
                     <div className="relative top-10">
