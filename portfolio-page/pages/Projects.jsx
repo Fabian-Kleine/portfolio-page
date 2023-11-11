@@ -116,7 +116,7 @@ const Projects = () => {
                                     id="python" />
                             </div>
                             <div className="flex justify-left mt-4">
-                                <button onClick={handleFilterApply} className="tracking-tight w-full sm:w-fit px-8 py-1 transition-all border-2 rounded-md border-[#fb5607] text-[#fb5607] hover:shadow-[0_0_35px_-3px_#fb5607] hover:bg-[#fb5607] hover:text-white">Apply</button>
+                                <button onClick={handleFilterApply} className="tracking-tight w-full sm:w-fit px-8 py-1 transition-all border-2 rounded-md border-[#f72585] text-[#f72585] hover:shadow-[0_0_35px_-3px_#fb5607] hover:bg-[#f72585] hover:text-white">Apply</button>
                             </div>
                         </div>
                     </div>
