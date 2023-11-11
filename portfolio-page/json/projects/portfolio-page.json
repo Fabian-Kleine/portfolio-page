@@ -30,9 +30,22 @@
         {
             "type": "code",
             "language": "javascript",
-            "code": "import React from 'react';\nimport TechnologieBadge from '../components/TechnologieBadge';\nimport projects from '../json/projects/';\n\nconst Projects = () => {\n    /* <Container> is a placeholder for the rest of the file */\n    return (\n       <Container>\n            {\n                projects.map((project) =>\n                    <div>\n                        <a href={'/project/' + project.filename}>\n                            <h2>{project.title}</h2>\n                            <div>\n                                <TechnologieBadge technologies={project.technologies} type={'badge'} />\n                            </div>\n                            <p dangerouslySetInnerHTML={{ __html: project.overview }}>\n                            </p>\n                       </a>\n                    </div>\n                )\n            }\n        </Container>\n    )\n}\n\nexport default Projects;",
+            "code": "import React from 'react';\nimport TechnologieBadge from '../components/TechnologieBadge';\nimport projects from '../json/projects/';\nimport { useState, useEffect } from 'react';\n\nconst Projects = () => {\n    /* <Container> is a placeholder for the rest of the file */\n    return (\n       <Container>\n            {\n                filteredProjects.map((project) =>\n                    <div>\n                        <a href={'/project/' + project.filename}>\n                            <h2>{project.title}</h2>\n                            <div>\n                                <TechnologieBadge technologies={project.technologies} type={'badge'} />\n                            </div>\n                            <p dangerouslySetInnerHTML={{ __html: project.overview }}>\n                            </p>\n                       </a>\n                    </div>\n                )\n            }\n        </Container>\n    )\n}\n\nexport default Projects;",
             "caption": "Projects.jsx (unstyled)"
         }, 
+        {
+            "type": "text",
+            "text": "Furthermore the Projects can be filtered by tags like the Projects Status, the Projects Size and the Projects Language. This is done by updating a the <i>filteredProjects</i> State everytime the filters are submitted. The following code is used to filter the Projects:"
+        },
+        {
+            "type": "code",
+            "language": "javascript",
+            "code": "function handleFilterApply() {\n    var newProjects = [];\n    projects.forEach((project) => {\n        var includesStatus = filter.status.some(f => project.tags.includes(f));\n        if (filter.status.length == 0) includesStatus = true;\n        var includesSize = filter.size.some(f => project.tags.includes(f));\n        if (filter.size.length == 0) includesSize = true;\n        var includesLang = filter.lang.some(f => project.tags.includes(f));\n        if (filter.lang.length == 0) includesLang = true;\n\n        if (includesStatus && includesSize && includesLang) newProjects.push(project);\n    });\n\n    setFilteredProjects(newProjects);\n}"
+        },
+        {
+            "type": "text",
+            "text": "The function loops through every project and checks if the filter can be found in the tags of the project. If the filter is empty the checking process is automatically passed. If every checking process passes, the project is pushed to an Array which is later set as the new <i>filteredProjects</i> State."
+        },
         {
             "type": "text",
             "title": "Project Page",
