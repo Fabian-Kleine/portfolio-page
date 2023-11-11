@@ -37,6 +37,7 @@
     ],
     "technologies": ["html", "css", "js", "bootstrap"],
     "tools": ["vscode"],
+    "tags": ["js", "small", "finished"],
     "buttons": {
         "project": "https://jsapps.fabian-kleine.dev/Collatz-Conjecture",
         "github": "https://github.com/Fabian-Kleine/Collatz-Conjecture"

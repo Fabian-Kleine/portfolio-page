@@ -75,6 +75,7 @@
     ],
     "technologies": ["html", "css", "js", "node", "MongoDB"],
     "tools": ["vscode", "google", "discord", "plesk"],
+    "tags": ["js", "large", "finished"],
     "buttons":{
         "project": "https://r6-creative-hub.com"
     }

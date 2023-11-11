@@ -30,6 +30,7 @@
     ],
     "technologies": ["python"],
     "tools": ["vscode"],
+    "tags": ["python", "small", "finished"],
     "buttons": {
         "github": "https://github.com/Fabian-Kleine/FiveM-Utils"
     }

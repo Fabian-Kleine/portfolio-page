@@ -60,6 +60,7 @@
     ],
     "technologies": ["html", "css", "js", "react", "tailwindcss"],
     "tools": ["vscode", "vite", "plesk"],
+    "tags": ["js", "medium", "finished"],
     "buttons": {
         "project": "https://fabian-kleine.dev",
         "github": "https://github.com/Fabian-Kleine/portfolio-page"
