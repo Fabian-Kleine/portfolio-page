@@ -92,6 +92,11 @@ const Project = () => {
                         </div>
                     )
                 }
+                {projectData.content.length == 0 && (
+                    <div className="mb-8">
+                        <p className="text-left br-margin text-sm md:text-base 2xl:text-lg">More Content is about to follow when the development of the Project <b>{projectData.title}</b> has progressed more.</p>
+                    </div>
+                )}
             </div>
         </>
     )
