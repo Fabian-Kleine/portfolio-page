@@ -16,7 +16,7 @@
         {
             "type": "text",
             "title": "How Does It Work",
-            "text": "The ensure.py file loops through every directory and adds it to a list which is later written to the output.txt file. Some folders that are not important are ignored by default.<br />The getVehicles.py file is a bit more complicated. It has to read the XML files where the vehicles are specified. In the XML files it reads the key value <i>modelName</i> which we need to later spawn the vehicle in Game. As in enure.py we need to loop through the directorys."
+            "text": "The ensure.py file loops through every directory and adds it to a list which is later written to the output.txt file. Some folders that are not important are ignored by default.<br />The getVehicles.py file is a bit more complicated. It has to read the XML files where the vehicles are specified. In the XML files it reads the key value <i>modelName</i> which we need to later spawn the vehicle in Game. As in ensure.py we need to loop through the directorys."
         },
         {
             "type": "list",
