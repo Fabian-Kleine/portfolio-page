@@ -115,6 +115,18 @@ const Projects = () => {
                                     name="python"
                                     id="python" />
                             </div>
+                            <div className="flex flex-row-reverse items-center justify-end mb-1">
+                                <label className="flex items-center" htmlFor="R">
+                                    <img src="/technologie-icons/R_logo.svg.png" alt="R" className="inline h-5 mr-1" />
+                                    R
+                                </label>
+                                <input
+                                    onChange={(e) => e.target.checked ? setFilter({ ...filter, lang: [...filter.lang, "R"] }) : setFilter({ ...filter, lang: filter.lang.filter((f) => { return f != "R" }) })}
+                                    className="mr-2 h-4 w-4"
+                                    type="checkbox"
+                                    name="R"
+                                    id="R" />
+                            </div>
                             <div className="flex justify-left mt-4">
                                 <button onClick={handleFilterApply} className="tracking-tight w-full sm:w-fit px-8 py-1 transition-all border-2 rounded-md border-[#f72585] text-[#f72585] hover:shadow-[0_0_35px_-3px_#f72585] hover:bg-[#f72585] hover:text-white">Apply</button>
                             </div>

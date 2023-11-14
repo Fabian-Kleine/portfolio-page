@@ -59,6 +59,12 @@
         "color": "#0277BD",
         "hover": "#FFC107"
     },
+    "R": {
+        "icon": "/technologie-icons/R_logo.svg.png",
+        "name": "R",
+        "color": "#1B67BB",
+        "hover": "#1B67BB"
+    },
 
     "vscode":{
         "icon": "/technologie-icons/icons8-vscode.svg",
