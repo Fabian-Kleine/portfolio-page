@@ -1,0 +1,58 @@
+{
+    "title": "Collatz Conjecture in R",
+    "filename": "collatz-conjecture-r",
+    "overview": "Collatz Conjecture describes a mathematical problem which works as follows. You start with a random number, if that number is even you devide it by 2, if it is odd you multiply it by 3 and add 1. By applying these formulas onto the outcome of the previous function you will eventually end up at a loop of 4, 2, and 1.<br />I already created a webapp that can calculate the steps it takes to reach 1 and the display these steps in a table and a graph. You can find about more about that project on it's <a href='https://fabian-kleine.dev/project/collatz-conjecture' target='_blank' class='underline font-bold'>Project Page</a>.<br/> I decided to redo the app in R because R is language that is focused on mathematic calculations.",
+    "content": [
+        {
+            "type": "text",
+            "title": "Main Function",
+            "text": "The main function asks the user for an input number and the runs the <i>collatz_conjecture</i> function. After that it prints the Input Number, the Heighest Number and the Steps until 1 to the console."
+        },
+        {
+            "type": "text",
+            "title": "Collatz Conjecture Function",
+            "text": "The <i>collatz_conjecture</i> function first checks if the input is valid meaning x ∈ N. After that it loops through a while loop until x == 1 or x == 0 and determines inside the loop what formula to apply depending on if the x is even or odd. After that it adds the outcome to the nums vector. <br />When this is done the nums vector is passed to the <i>render_graph</i> and <i>render_table</i> functions to render the data in the graph and to print the data to the console as a table."
+        },
+        {
+            "type": "code",
+            "language": "r",
+            "code": "collatz_conjecture <- function(x) {\n  # ↑ check if input is a natural number or is empty ↑\n  nums <- c(x)\n  while (x != 1 && x != 0) {\n    if (x == 1 || x == 0) {\n      break()\n    }\n    if (check_if_odd(x)) {\n      x <- 3 * x + 1\n    } else if (!check_if_odd(x)) {\n      x <- x / 2\n    } else {\n      print('failed testing if odd or even')\n    }\n    nums <- c(nums, x)\n  }\n\n  render_graph(nums)\n  render_table(nums)\n  return(nums)\n}\n\n# check if number is odd\ncheck_if_odd <- function(num) {\n  return(num %% 2 == 1)\n}"
+        },
+        {
+            "type": "img",
+            "title": "Render Graph",
+            "src": "/plot.png",
+            "text": "The <i>render_graph</i> function renders the data in a graph like the one shown above. In this example I used 127 as input and the highest number was 4372.<br /> The <i>render_graph</i> function uses the built in <i>plot()</i> and <i>lines()</i> functions to render the graph like this:"
+        },
+        {
+            "type": "code",
+            "language": "r",
+            "code": "render_graph <- function(nums) {\n  x_axis <- seq(from = 1, to = length(nums), by = 1)\n  y_axis <- nums\n  plot(x_axis, y_axis, xlab = 'Steps until 1', ylab = 'Numbers')\n  lines(x_axis, y_axis, col = 'blue')\n}"
+        },
+        {
+            "type": "text",
+            "title": "Print Table",
+            "text": "The <i>render_table</i> function prints the numbers and the applied formulas to the console like this:"
+        },
+        {
+            "type": "img",
+            "src": "/collatz-conjecture-table.PNG"
+        },
+        {
+            "type": "list",
+            "title": "What Did I Learn?",
+            "list": [
+                "Basics of R",
+                "Drawing Plots in R",
+                "Making Tables in R",
+                "How to translate a project between languages"
+            ]
+        }
+    ],
+    "technologies": ["R"],
+    "tools": ["vscode"],
+    "tags": ["R", "small", "finished"],
+    "buttons": {
+        "github": "https://github.com/Fabian-Kleine/Collatz-Conjecture-R"
+    }
+}
