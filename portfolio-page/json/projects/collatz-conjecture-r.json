@@ -1,12 +1,12 @@
 {
     "title": "Collatz Conjecture in R",
     "filename": "collatz-conjecture-r",
-    "overview": "Collatz Conjecture describes a mathematical problem which works as follows. You start with a random number, if that number is even you devide it by 2, if it is odd you multiply it by 3 and add 1. By applying these formulas onto the outcome of the previous function you will eventually end up at a loop of 4, 2, and 1.<br />I already created a webapp that can calculate the steps it takes to reach 1 and the display these steps in a table and a graph. You can find about more about that project on it's <a href='https://fabian-kleine.dev/project/collatz-conjecture' target='_blank' class='underline font-bold'>Project Page</a>.<br/> I decided to redo the app in R because R is language that is focused on mathematic calculations.",
+    "overview": "Collatz Conjecture describes a mathematical problem which works as follows. You start with a random number, if that number is even you devide it by 2, if it is odd you multiply it by 3 and add 1. By applying these formulas onto the outcome of the previous function you will eventually end up at a loop of 4, 2, and 1.<br />I already created a webapp that can calculate the steps it takes to reach 1 and then display these steps in a table and a graph. You can find out more about that project on its <a href='https://fabian-kleine.dev/project/collatz-conjecture' target='_blank' class='underline font-bold'>Project Page</a>.<br/> I decided to redo the app in R because R is language that is a focused on mathematic calculations.",
     "content": [
         {
             "type": "text",
             "title": "Main Function",
-            "text": "The main function asks the user for an input number and the runs the <i>collatz_conjecture</i> function. After that it prints the Input Number, the Heighest Number and the Steps until 1 to the console."
+            "text": "The main function asks the user for an input number and then runs the <i>collatz_conjecture</i> function. After that it prints the Input Number, the Heighest Number and the Steps until 1 to the console."
         },
         {
             "type": "text",
