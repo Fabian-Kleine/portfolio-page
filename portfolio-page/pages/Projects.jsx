@@ -140,8 +140,9 @@ const Projects = () => {
                                     <TechnologieBadge technologies={project.technologies} type={"badge"} />
                                 </div>
                                 <p dangerouslySetInnerHTML={{ __html: project.overview }} className="text-left text-white/50 line-clamp-2 px-2 max-w-2xl">
-
+                                    
                                 </p>
+                                <span className="block px-2 text-left text-[#1e96fc] font-bold">Read more...</span>
                             </a>
                         </div>
                     )}
