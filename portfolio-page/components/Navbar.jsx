@@ -28,7 +28,7 @@ const Navbar = () => {
         <nav className="flex flex-row relative sm:flex-col md:flex-row justify-between w-full pb-6 sm:pb-2 pt-6 sm:px-4 md:py-6 bg-[#242424] shadow-lg z-10">
             <div className="flex justify-center items-center px-4 sm:px-10">
                 <a className="flex justify-center items-center" href="/">
-                    <img src="/profile-picture.jpg" alt="Profile Image" className="rounded-full h-10 xs:h-14" />
+                    <img src="/profile-picture2.png" alt="Profile Image" className="rounded-full h-10 xs:h-14" />
                     <h1 className="font-bold ml-1 xs:ml-4 text-base xs:text-xl uppercase tracking-widest transition-all text-gradient-hover hover:[text-shadow:_0_0_25px_#7b2cbf]">Fabian Kleine</h1>
                 </a>
             </div>
