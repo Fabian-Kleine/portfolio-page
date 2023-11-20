@@ -26,7 +26,7 @@ const Contact = () => {
 
         setError("");
 
-        window.location.href = `mailto:fabiankleine800@gmail.com?subject=${subject}&body=${message}%0D%0A%0D%0ASent by ${name}`;
+        window.location.href = `mailto:contact@fabian-kleine.dev?subject=${subject}&body=${message}%0D%0A%0D%0ASent by ${name}`;
         
         const inputs = document.querySelectorAll('input');
         const textarea = document.querySelector('textarea');
