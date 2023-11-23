@@ -54,7 +54,7 @@
         {
             "type": "text",
             "title": "Contact Page",
-            "text": "The Contact Page features a form which opens the email application after submit. This is done by running <i>window.location.href = 'mailto:&#060;Email&#062;subject=&#060;Subject&#062;&body=&#060;Body&#062;'</i> and replacing <i>&#060;Subject&#062;</i> and <i>&#060;Body&#062;</i> with the values entered in the input fields."
+            "text": "The Contact Page features a form which opens the email application after submit. This is done by running <i>window.location.href = 'mailto:&#060;Email&#062;?subject=&#060;Subject&#062;&body=&#060;Body&#062;'</i> and replacing <i>&#060;Subject&#062;</i> and <i>&#060;Body&#062;</i> with the values entered in the input fields."
         },
         {
             "type": "text",
