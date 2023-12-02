@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { Link, Github } from "lucide-react";
+import { Link, Github, FlaskConical } from "lucide-react";
 import TechnologieBadge from "../components/TechnologieBadge";
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import "highlight.js/styles/github-dark-dimmed.css";
@@ -44,6 +44,9 @@ const Project = () => {
                     <div className="relative top-10">
                         {projectData.buttons.project && (
                             <a className="max-[320px]:px-10 text-xl md:text-2xl 2xl:text-3xl tracking-tight px-16 py-4 mx-2 mb-2 uppercase transition-all border-2 rounded-md border-[#f72585] text-[#f72585] hover:shadow-[0_0_35px_-3px_#f72585] hover:bg-[#f72585] hover:text-white inline-flex items-center" href={projectData.buttons.project} target="_blank"><Link className="inline mr-2" />Project Link</a>
+                        )}
+                        {projectData.buttons.demo && (
+                            <a className="max-[320px]:px-10 text-xl md:text-2xl 2xl:text-3xl tracking-tight px-16 py-4 mx-2 mb-2 uppercase transition-all border-2 rounded-md border-[#f72585] text-[#f72585] hover:shadow-[0_0_35px_-3px_#f72585] hover:bg-[#f72585] hover:text-white inline-flex items-center" href={projectData.buttons.demo} target="_blank"><FlaskConical className="inline mr-2" />Demo Link</a>
                         )}
                         {projectData.buttons.github && (
                             <a className="max-[320px]:px-10 text-xl md:text-2xl 2xl:text-3xl tracking-tight px-16 py-4 mx-2 uppercase transition-all border-2 rounded-md border-[#ffd60a] text-[#ffd60a] hover:shadow-[0_0_35px_-3px_#ffd60a] hover:bg-[#ffd60a] hover:text-white inline-flex items-center" href={projectData.buttons.github} target="_blank"><Github className="inline mr-2" />GitHub</a>
