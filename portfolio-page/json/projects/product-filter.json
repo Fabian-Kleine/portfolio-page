@@ -1,0 +1,41 @@
+{
+    "title": "Chemical Products Filter",
+    "filename": "product-filter",
+    "overview": "In this project I programmed a product filter for chemical products using nextjs and supabase. The products can be filtered by certain values which are defined in the database. Furthermore they can be added to wishlist.<br />The Website is dedicated to the chemistry company <i>oleon</i> so clients can in theory find their wanted products faster..",
+    "content": [
+        {
+            "type": "text",
+            "title": "The UI",
+            "text": "The UI of the Website is heavily inspired by the homepage of <a class='underline font-bold' href='https://www.oleon.com/' target='_blank' >oleon</a>. At the top of the Navbar you can find the same banner as on the homepage. The Navbar itself has three components. The <i>oleon</i> logo to get to the homepage, the <i>Find Products</i> Field to get to the products filter and the star which leads you to the Wishlist.<br />The found products are displayed in cards which show all the relevant data."
+        },
+        {
+            "type": "text",
+            "title": "The Filter System",
+            "text": "The Filter System gets a minimum and a maximum value for most of the filters from the <i>twosided Rangeselector</i> component. This component allows yout to select a maximum and a minimum value using a rangeselector and sets these values in their State.<br />The Supabase Query is run after every State change using <i>useEffect</i>."
+        },
+        {
+            "type": "code",
+            "language": "javascript",
+            "code": "useEffect(() => {\n    async function loadProducts() {\n      let query = supabaseClient\n        .from('products')\n        .select();\n\n      if (acidMin) query = query.gte('acid value', acidMin);\n      if (acidMax) query = query.lte('acid value', acidMax);\n      /* more filters */\n\n      if (group && group != 0) query = query.eq('group', group);\n\n      const { data } = await query;\n\n      setProducts(data);\n    }\n\n    loadProducts();\n}, [acidMin, acidMax, group /* more dependencies */]);"
+        },
+        {
+            "type": "text",
+            "title": "Wishlist",
+            "text": "When clicking on the star next to the name of the product in the card, the id of the product is added to the <i>localStorage</i>. From their it can be retrieved by the wishlists page and the id can be used to load the data of the products from the database."
+        },
+        {
+            "type": "list",
+            "title": "What Did I Learn?",
+            "list": [
+                "Supabase",
+                "Using localStorage with React/Nextjs"
+            ]
+        }
+    ],
+    "technologies": ["html", "css", "js", "next", "supabase", "tailwindcss"],
+    "tools": ["vscode"],
+    "tags": ["js", "medium", "wip"],
+    "buttons": {
+        "demo": "https://oleon-product-filter.vercel.app/"
+    }
+}
