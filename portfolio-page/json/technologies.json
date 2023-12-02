@@ -41,6 +41,12 @@
         "color": "#00684A", 
         "hover": "#00684A" 
     },
+    "supabase": {
+        "icon": "/technologie-icons/supabase-logo-icon.png",
+        "name": "supabase",
+        "color": "#3ECE90",
+        "hover": "#32B179"
+    },
     "tailwindcss":{
         "icon": "/technologie-icons/icons8-tailwindcss.svg",
         "name": "tailwindcss",
