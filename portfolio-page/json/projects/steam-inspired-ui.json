@@ -1,0 +1,35 @@
+{
+    "title": "Steam Inspired UI",
+    "filename": "steam-inspired-ui",
+    "overview": "This CSS Library is inspired by the style of the steam website and the steam client.<br /> It features compontents like the Navigation Bar, Buttons and more. The library can be used as whole or only with the components you want to use.",
+    "content": [
+        {
+            "type": "text",
+            "title": "Usage",
+            "text": "You can find out more on how to use the library on its GitHub page. <br /><a class='underline' href='https://github.com/Fabian-Kleine/steam-inspired-ui-library' target='_blank' >https://github.com/Fabian-Kleine/steam-inspired-ui-library</a>"
+        },
+        {
+            "type": "img",
+            "title": "Example Components",
+            "src": "/steam-inspired-ui/Buttons.PNG",
+            "caption": "Buttons in different styles and sizes"
+        },
+        {
+            "type": "img",
+            "src": "/steam-inspired-ui/Navbar.PNG",
+            "caption": "Navbar with responsive design and dropdowns"
+        },
+        {
+            "type": "img",
+            "src": "/steam-inspired-ui/Menubar.PNG",
+            "caption": "Menubar with responsive design and dropdowns"
+        }
+    ],
+    "technologies": ["html", "css"],
+    "tools": ["vscode"],
+    "tags": ["css", "small", "wip"],
+    "buttons": {
+        "demo": "https://projects.fabian-kleine.dev/steam-inspired-ui-library/",
+        "github": "https://github.com/Fabian-Kleine/steam-inspired-ui-library"
+    }
+}
