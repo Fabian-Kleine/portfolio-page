@@ -23,11 +23,16 @@
             "type": "img",
             "src": "/steam-inspired-ui/Menubar.PNG",
             "caption": "Menubar with responsive design and dropdowns"
+        },
+        {
+            "type": "img",
+            "src": "/steam-inspired-ui/Cards.PNG",
+            "caption": "Cards with different bodys, sizes and styles"
         }
     ],
-    "technologies": ["html", "css"],
+    "technologies": ["html", "css", "js"],
     "tools": ["vscode"],
-    "tags": ["css", "small", "wip"],
+    "tags": ["js", "small", "wip"],
     "buttons": {
         "demo": "https://projects.fabian-kleine.dev/steam-inspired-ui-library/",
         "github": "https://github.com/Fabian-Kleine/steam-inspired-ui-library"
