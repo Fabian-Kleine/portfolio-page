@@ -11,7 +11,7 @@
         {
             "type": "text",
             "title": "Replacing Hard Work With Automation",
-            "text": "The process of installing mods and resources for your own FiveM server can be very stressful because very mod has to be individually started and every installed vehicle mod has to be added to the vMenu spawnlist.<br />The Tool I programmed allows you to get these start commands and the vehicleslist just by entering the location of the resources folder of your FiveM server. These can than simply be copied over from the output textfiles to the files where they belong."
+            "text": "The process of installing mods and resources for your own FiveM server can be very stressful because every mod has to be individually started and every installed vehicle mod has to be added to the vMenu spawnlist.<br />The Tool I programmed allows you to get these start commands and the vehicleslist just by entering the location of the resources folder of your FiveM server. These can than simply be copied over from the output textfiles to the files where they belong."
         },
         {
             "type": "text",
