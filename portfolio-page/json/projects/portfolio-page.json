@@ -59,7 +59,7 @@
         {
             "type": "text",
             "title": "Components",
-            "text": "The Website uses three Components: <i>Navbar</i>, <i>Footer</i> and <i>TechnologieBadge</i><br />The <i>Navbar</i> is mobile firendly because it switches to a Hamburger Menu when the screen-width is getting to tight to display the whole Navbar. This is done with the Tailwindcss Breakpoints.<br />The <i>Footer</i> just returns the HTML for the footer.<br />The <i>TechnologieBadge</i> Component takes technologies and type as props. It imports the data about the technologies from <i>@/json/technologies.json</i>. It uses this data and the prop technologies which is an Array to render out Badges depending on the style defined in the type prop. This Component is used in <i>Home.jsx</i>, <i>Projects.jsx</i> and <i>Project.jsx</i>."
+            "text": "The Website uses three Components: <i>Navbar</i>, <i>Footer</i> and <i>TechnologieBadge</i><br />The <i>Navbar</i> is mobile friendly because it switches to a Hamburger Menu when the screen-width is getting to tight to display the whole Navbar. This is done with the Tailwindcss Breakpoints.<br />The <i>Footer</i> just returns the HTML for the footer.<br />The <i>TechnologieBadge</i> Component takes technologies and type as props. It imports the data about the technologies from <i>@/json/technologies.json</i>. It uses this data and the prop technologies which is an Array to render out Badges depending on the style defined in the type prop. This Component is used in <i>Home.jsx</i>, <i>Projects.jsx</i> and <i>Project.jsx</i>."
         },
         {
             "type": "list",
