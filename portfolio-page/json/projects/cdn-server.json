@@ -1,0 +1,41 @@
+{
+    "title": "CDN Server",
+    "filename": "cdn-server",
+    "overview": "This Project features a basic cdn server built using node.js and express.js.<br /> For Images it features resizing and cropping.<br /> CSS Files are minified before they are sent to the client.<br /> JS Files are minified and compressed before they are sent to the client.",
+    "content": [
+        {
+            "type": "text",
+            "title": "Features",
+            "text": "The cdn server allows to transform the requested image in the following ways using the npm package <i>sharp</i>:"
+        },
+        {
+            "type": "list",
+            "list": [
+                "Resizing",
+                "Cropping",
+                "Bluring",
+                "Grayscale",
+                "Vertical/Horizontal Mirroring"
+            ]
+            
+        },
+        {
+            "type": "text",
+            "text": "Further placeholder images can be generated just by entering the width and/or height into the image url.<br />CSS and JS Files are automatically minified and/or compressed.<br />You can find out more in the README of the Project on <a class='underline font-bold' href='https://github.com/Fabian-Kleine/cdn-server#cdn-server' target='_blank'>GitHub</a>."
+        },
+        {
+            "type": "list",
+            "title": "What Did I Learn?",
+            "list": [
+                "Express Parameters",
+                "Minifying of Files"
+            ]
+        }
+    ],
+    "technologies": ["js", "node"],
+    "tools": ["sharp", "postcss", "vscode"],
+    "tags": ["js", "small", "finished"],
+    "buttons": {
+        "github": "https://github.com/Fabian-Kleine/cdn-server"
+    }
+}
