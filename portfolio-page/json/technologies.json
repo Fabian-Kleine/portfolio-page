@@ -107,5 +107,17 @@
         "name": "",
         "color": "#008272",
         "hover": "#008272"
+    },
+    "sharp": {
+        "icon": "/technologie-icons/sharp-logo.svg",
+        "name": "sharp",
+        "color": "#009900",
+        "hover": "#99CC00"
+    },
+    "postcss": {
+        "icon": "/technologie-icons/postcss-logo.svg",
+        "name": "PostCSS",
+        "color": "#DD3A0A",
+        "hover": "#DD3A0A"
     }
 }
