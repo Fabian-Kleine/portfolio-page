@@ -21,7 +21,7 @@
         },
         {
             "type": "text",
-            "text": "Further placeholder images can be generated just by entering the width and/or height into the image url.<br />CSS and JS Files are automatically minified and/or compressed.<br />You can find out more in the README of the Project on <a class='underline font-bold' href='https://github.com/Fabian-Kleine/cdn-server#cdn-server' target='_blank'>GitHub</a>."
+            "text": "Further placeholder images can be generated just by entering the width and/or height into the image url.<br />CSS and JS Files are automatically minified and/or compressed.<br />These minified files can be stored inside the cache to decrease the loading time on the next load of the file.<br />You can find out more in the README of the Project on <a class='underline font-bold' href='https://github.com/Fabian-Kleine/cdn-server#cdn-server' target='_blank'>GitHub</a>."
         },
         {
             "type": "list",
