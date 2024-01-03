@@ -40,9 +40,9 @@ const Projects = () => {
                 <h1 className="text-4xl 2xl:text-5xl leading-20 font-bold tracking-widest uppercase mb-4">Projects</h1>
                 <div className="flex items-center flex-col pb-32">
                     <div className="h-2 w-10 bg-gradient3 mb-4 rounded-xl"></div>
-                    <div className="flex justify-left w-full xl:w-1/2">
-                        <button onClick={() => setOpenFilter(!openFilter)} className="bg-[#242424] mb-4 bg-opacity-60 border-[#242424] border-2 rounded-md p-2 font-bold"><Filter className="inline mr-2" />Filter by Tags</button>
-                        <div className={`${openFilter ? "block" : "hidden"} absolute bg-[#242424] mt-12 shadow-lg border-[#242424] border-2 rounded-md p-2 font-bold`}>
+                    <div className="relative flex justify-left items-center w-full xl:w-1/2 mb-4">
+                        <button onClick={() => setOpenFilter(!openFilter)} className="bg-[#242424] bg-opacity-60 border-[#242424] border-2 rounded-md p-2 font-bold"><Filter className="inline mr-2" />Filter by Tags</button>
+                        <div className={`${openFilter ? "block" : "hidden"} absolute top-12 bg-[#242424] shadow-lg border-[#242424] border-2 rounded-md p-2 font-bold`}>
                             <h4 className="text-white/50 text-left mt-2 border-b border-white/50">Project Status</h4>
                             <div className="flex flex-row-reverse items-center justify-end mb-1">
                                 <label htmlFor="finished"><ShieldCheck className="inline mr-1" />Finished</label>
@@ -131,6 +131,7 @@ const Projects = () => {
                                 <button onClick={handleFilterApply} className="tracking-tight w-full sm:w-fit px-8 py-1 transition-all border-2 rounded-md border-[#f72585] text-[#f72585] hover:shadow-[0_0_35px_-3px_#f72585] hover:bg-[#f72585] hover:text-white">Apply</button>
                             </div>
                         </div>
+                        <span className="ml-2 text-lg"><b>{filteredProjects.length}</b> {filteredProjects.length != 1 ? "Projects" : "Project"}</span>
                     </div>
                     {filteredProjects.map((project, i) =>
                         <div key={i} className="bg-[#242424] mb-4 bg-opacity-60 border-[#242424] border-2 w-full xl:w-1/2 rounded-md p-2">
