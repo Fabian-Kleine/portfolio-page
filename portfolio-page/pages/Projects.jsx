@@ -45,7 +45,7 @@ const Projects = () => {
                         <div className={`${openFilter ? "block" : "hidden"} absolute top-12 bg-[#242424] shadow-lg border-[#242424] border-2 rounded-md p-2 font-bold`}>
                             <h4 className="text-white/50 text-left mt-2 border-b border-white/50">Project Status</h4>
                             <div className="flex flex-row-reverse items-center justify-end mb-1">
-                                <label htmlFor="finished"><ShieldCheck className="inline mr-1" />Finished</label>
+                                <label htmlFor="finished"><ShieldCheck className="inline mr-1" />Finished <span className="text-white/50 font-normal">({projects.filter(project => project.tags.includes("finished")).length})</span></label>
                                 <input
                                     onChange={(e) => e.target.checked ? setFilter({ ...filter, status: [...filter.status, "finished"] }) : setFilter({ ...filter, status: filter.status.filter((f) => { return f != "finished" }) })}
                                     className="mr-2 h-4 w-4"
@@ -54,7 +54,7 @@ const Projects = () => {
                                     id="finished" />
                             </div>
                             <div className="flex flex-row-reverse items-center justify-end mb-1">
-                                <label htmlFor="wip"><Hammer className="inline mr-1" />Work in Progress</label>
+                                <label htmlFor="wip"><Hammer className="inline mr-1" />Work in Progress <span className="text-white/50 font-normal">({projects.filter(project => project.tags.includes("wip")).length})</span></label>
                                 <input
                                     onChange={(e) => e.target.checked ? setFilter({ ...filter, status: [...filter.status, "wip"] }) : setFilter({ ...filter, status: filter.status.filter((f) => { return f != "wip" }) })}
                                     className="mr-2 h-4 w-4"
@@ -64,7 +64,7 @@ const Projects = () => {
                             </div>
                             <h4 className="text-white/50 text-left mt-2 border-b border-white/50">Project Size</h4>
                             <div className="flex flex-row-reverse items-center justify-end mb-1">
-                                <label htmlFor="small">Small</label>
+                                <label htmlFor="small">Small <span className="text-white/50 font-normal">({projects.filter(project => project.tags.includes("small")).length})</span></label>
                                 <input
                                     onChange={(e) => e.target.checked ? setFilter({ ...filter, size: [...filter.size, "small"] }) : setFilter({ ...filter, size: filter.size.filter((f) => { return f != "small" }) })}
                                     className="mr-2 h-4 w-4"
@@ -73,7 +73,7 @@ const Projects = () => {
                                     id="small" />
                             </div>
                             <div className="flex flex-row-reverse items-center justify-end mb-1">
-                                <label htmlFor="medium">Medium</label>
+                                <label htmlFor="medium">Medium <span className="text-white/50 font-normal">({projects.filter(project => project.tags.includes("medium")).length})</span></label>
                                 <input
                                     onChange={(e) => e.target.checked ? setFilter({ ...filter, size: [...filter.size, "medium"] }) : setFilter({ ...filter, size: filter.size.filter((f) => { return f != "medium" }) })}
                                     className="mr-2 h-4 w-4"
@@ -82,7 +82,7 @@ const Projects = () => {
                                     id="medium" />
                             </div>
                             <div className="flex flex-row-reverse items-center justify-end mb-1">
-                                <label htmlFor="large">Large</label>
+                                <label htmlFor="large">Large <span className="text-white/50 font-normal">({projects.filter(project => project.tags.includes("large")).length})</span></label>
                                 <input
                                     onChange={(e) => e.target.checked ? setFilter({ ...filter, size: [...filter.size, "large"] }) : setFilter({ ...filter, size: filter.size.filter((f) => { return f != "large" }) })}
                                     className="mr-2 h-4 w-4"
@@ -95,6 +95,7 @@ const Projects = () => {
                                 <label className="flex items-center" htmlFor="js">
                                     <img src="/technologie-icons/icons8-js.svg" alt="JavaScript" className="inline h-5 mr-1" />
                                     JavaScript
+                                    <span className="ml-1 text-white/50 font-normal">({projects.filter(project => project.tags.includes("js")).length})</span>
                                 </label>
                                 <input
                                     onChange={(e) => e.target.checked ? setFilter({ ...filter, lang: [...filter.lang, "js"] }) : setFilter({ ...filter, lang: filter.lang.filter((f) => { return f != "js" }) })}
@@ -107,6 +108,7 @@ const Projects = () => {
                                 <label className="flex items-center" htmlFor="python">
                                     <img src="/technologie-icons/icons8-python.svg" alt="Python" className="inline h-5 mr-1" />
                                     Python
+                                    <span className="ml-1 text-white/50 font-normal">({projects.filter(project => project.tags.includes("python")).length})</span>
                                 </label>
                                 <input
                                     onChange={(e) => e.target.checked ? setFilter({ ...filter, lang: [...filter.lang, "python"] }) : setFilter({ ...filter, lang: filter.lang.filter((f) => { return f != "python" }) })}
@@ -118,7 +120,8 @@ const Projects = () => {
                             <div className="flex flex-row-reverse items-center justify-end mb-1">
                                 <label className="flex items-center" htmlFor="R">
                                     <img src="/technologie-icons/R_logo.svg.png" alt="R" className="inline h-5 mr-1" />
-                                    R
+                                    R 
+                                    <span className="ml-1 text-white/50 font-normal">({projects.filter(project => project.tags.includes("R")).length})</span>
                                 </label>
                                 <input
                                     onChange={(e) => e.target.checked ? setFilter({ ...filter, lang: [...filter.lang, "R"] }) : setFilter({ ...filter, lang: filter.lang.filter((f) => { return f != "R" }) })}
