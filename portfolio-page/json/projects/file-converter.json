@@ -1,0 +1,26 @@
+{
+    "title": "File Converter",
+    "filename": "file-converter",
+    "overview": "This is a basic file converter written in python using the package convertapi to convert the files. The App is rendered in windows which are created with tkinter.",
+    "content": [
+        {
+            "type": "text",
+            "title": "Structure",
+            "text": "The tool features two windows.<br />In the select window the path to the file is selected by the user. After pressing the convert button the converter window opens.<br />In the converter window the filetype of the output file can be selected. Further the directory where to save the file can be selected. After converting the file you can convert another file by clicking the file.<br />You can find out more about this project on its <a class='underline font-bold' href='https://github.com/Fabian-Kleine/file-converter' target='_blank' >GitHub page</a>."
+        },
+        {
+            "type": "list",
+            "title": "What Did I Learn?",
+            "list": [
+                "Basics of Python",
+                "Using tkinter"
+            ]
+        }
+    ],
+    "technologies": ["python"],
+    "tools": ["vscode"],
+    "tags": ["python", "small", "finished"],
+    "buttons": {
+        "github": "https://github.com/Fabian-Kleine/file-converter"
+    }
+}
