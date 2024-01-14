@@ -6,7 +6,7 @@
 
     ],
     "technologies": ["html", "css", "js", "next", "MongoDB", "tailwindcss"],
-    "tools": ["vscode", "bingmaps"],
+    "tools": ["vscode", "bingmaps", "shadcn"],
     "tags": ["js", "large", "wip"],
     "buttons": {}
 }

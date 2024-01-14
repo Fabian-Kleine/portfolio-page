@@ -53,6 +53,12 @@
         "color": "#00A9BD", 
         "hover": "#00A9BD"
     },
+    "shadcn":{
+        "icon": "/technologie-icons/shadcn_ui.png",
+        "name": "shadcn/ui",
+        "color": "#2F2F2F", 
+        "hover": "#E7E7E7"
+    },
     "bootstrap": {
         "icon": "/technologie-icons/icons8-bootstrap.svg",
         "name": "Bootstrap",
