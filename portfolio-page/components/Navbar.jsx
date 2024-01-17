@@ -27,7 +27,7 @@ const Navbar = () => {
     return (
         <nav className="flex flex-row relative sm:flex-col md:flex-row justify-between w-full pb-6 sm:pb-2 pt-6 sm:px-4 md:py-6 bg-[#242424] shadow-lg z-10">
             <div className="flex justify-center items-center px-4 sm:px-10">
-                <a className="flex justify-center items-center" href="/">
+                <a aria-label="Home" className="flex justify-center items-center" href="/">
                     <img src="/profile-picture2.png" alt="Profile Image" className="rounded-full h-10 xs:h-14" />
                     <h1 className="font-bold ml-1 xs:ml-4 text-base xs:text-xl uppercase tracking-widest transition-all text-gradient-hover hover:[text-shadow:_0_0_25px_#7b2cbf]">Fabian Kleine</h1>
                 </a>
@@ -39,7 +39,7 @@ const Navbar = () => {
                 <a href="/contact" className="text-lg px-6 py-4 mx-2 transition-all border border-transparent rounded-md hover:border-[#fb5607] hover:shadow-[0_0_25px_-3px_#fb5607] hover:text-[#fb5607] flex items-center"><AtSign className="inline mr-1 h-5" />Contact</a>
             </div>
             <div className="flex justify-center items-center px-6 sm:hidden">
-                <button onClick={() => setSidebarOpened(!sidebarOpened)} className="p-2 transition-colors rounded-full"><X className={`transition-all ${sidebarOpened ? "block" : "hidden"}`} /><Menu className={`transition-all ${!sidebarOpened ? "block" : "hidden"}`} /></button>
+                <button aria-label={sidebarOpened ? "Close Menu" : "Open Menu"} onClick={() => setSidebarOpened(!sidebarOpened)} className="p-2 transition-colors rounded-full"><X className={`transition-all ${sidebarOpened ? "block" : "hidden"}`} /><Menu className={`transition-all ${!sidebarOpened ? "block" : "hidden"}`} /></button>
             </div>
             {sidebarOpened && (
                 <div className="absolute bg-[#242424] w-full pb-4 font-bold top-20 xs:top-24 z-10 shadow-lg">

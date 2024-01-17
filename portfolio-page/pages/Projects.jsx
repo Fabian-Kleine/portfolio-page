@@ -41,7 +41,7 @@ const Projects = () => {
                 <div className="flex items-center flex-col pb-32">
                     <div className="h-2 w-10 bg-gradient3 mb-4 rounded-xl"></div>
                     <div className="relative flex justify-left items-center w-full xl:w-1/2 mb-4">
-                        <button onClick={() => setOpenFilter(!openFilter)} className="bg-[#242424] bg-opacity-60 border-[#242424] border-2 rounded-md p-2 font-bold"><Filter className="inline mr-2" />Filter by Tags</button>
+                        <button aria-label="Filter by Tags" onClick={() => setOpenFilter(!openFilter)} className="bg-[#242424] bg-opacity-60 border-[#242424] border-2 rounded-md p-2 font-bold"><Filter className="inline mr-2" />Filter by Tags</button>
                         <div className={`${openFilter ? "block" : "hidden"} absolute top-12 bg-[#242424] shadow-lg border-[#242424] border-2 rounded-md p-2 font-bold`}>
                             <h4 className="text-white/50 text-left mt-2 border-b border-white/50">Project Status</h4>
                             <div className="flex flex-row-reverse items-center justify-end mb-1">
@@ -138,7 +138,7 @@ const Projects = () => {
                     </div>
                     {filteredProjects.map((project, i) =>
                         <div key={i} className="bg-[#242424] mb-4 bg-opacity-60 border-[#242424] border-2 w-full xl:w-1/2 rounded-md p-2">
-                            <a href={"/project/" + project.filename}>
+                            <a aria-label="Click to read more" title="Click to read more" href={"/project/" + project.filename}>
                                 <h2 className="text-left px-2 pt-2 font-bold text-2xl line-clamp-1">{project.title}{project.tags.includes("wip") && (<span className={"inline-flex items-center cursor-default text-sm font-bold px-2 ml-2 mb-2 rounded-xl border-2"}><Hammer className="inline h-4" />W.I.P.</span>)}</h2>
                                 <div className="flex flex-wrap px-2 my-2 xl:my-0">
                                     <TechnologieBadge technologies={project.technologies} type={"badge"} />
