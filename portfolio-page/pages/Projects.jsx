@@ -150,6 +150,12 @@ const Projects = () => {
                             </a>
                         </div>
                     )}
+                    {!filteredProjects.length && (
+                        <div className="mt-24">
+                            <h3 className="text-2xl 2xl:text-3xl leading-20 font-bold uppercase tracking-wider mb-4">No Projects found</h3>
+                            <p className="text-sm 2xl:text-base leading-7">Try removing some filters or only search with one filter applied</p>
+                        </div>
+                    )}
                 </div>
             </div>
         </div>
