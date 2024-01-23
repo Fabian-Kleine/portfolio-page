@@ -9,7 +9,7 @@ const Footer = () => {
                     <p className="text-left mt-4 text-sm md:text-base 2xl:text-lg leading-7 sm:max-w-[55rem] mb-4">I'm a student and selftaught Programmer focusing on web development but also interested to learn more</p>
                 </div>
                 <div className="py-6 border-t-2 border-gray-700 text-center text-sm">
-                    © Copyright 2023. Made by <a href="/" className="underline cursor-pointer font-bold">Fabian Kleine</a>
+                    © Copyright 2024. Made by <a href="/" className="underline cursor-pointer font-bold">Fabian Kleine</a>
                 </div>
             </div>
         </footer>
