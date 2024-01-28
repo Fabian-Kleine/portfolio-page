@@ -30,7 +30,7 @@
             "language": "javascript",
             "title": "Backend - Handling Of Received Data",
             "code": "const router = require('express').Router();\nconst bodyParser = require('body-parser');\nconst urlencodedParser = bodyParser.urlencoded({ extended: false });\nconst jwt_decode = require('jwt-decode');\nconst verify = require('./verifyToken');\nconst User = require('../model/User');\n\n/* Model */\nconst Operator = require('../model/Operator');\n\nrouter.post('/operator', urlencodedParser, async (req,res) => {\n    const token = req.cookies['jwt'];\n    const decoded = jwt_decode(token);\n    const user = await User.findById(decoded._id, '_id name');\n    const operator = new Operator({\n        user: decoded._id,\n        nickname: req.body.name.toLowerCase(),\n        /* rest of data */\n    });\n    const savedOperator = await operator.save();\n    console.log(`${user.name} created an operator named ${operator.nickname}`);\n});",
-            "text": "The data is send to an express API where it is inserted into the <i>Operator</i> Model which is defined with the npm package mongoosEJS which makes it easier to use MongoDB. Further the User that created the Operator is determined by reading the JSON Web Token which was stored in a Cookie during the login process."
+            "text": "The data is send to an express API where it is inserted into the <i>Operator</i> Model which is defined with the npm package mongoose which makes it easier to use MongoDB. Further the User that created the Operator is determined by reading the JSON Web Token which was stored in a Cookie during the login process."
         },
         {
             "type": "text",
