@@ -1,0 +1,37 @@
+{
+    "title": "Stoplights",
+    "filename": "stoplights",
+    "overview": "This is a small project which features four stoplights which are switched in a periodic cycle. Further four different pedestrian stoplights can be requested by the press of a button.",
+    "content": [
+        {
+            "type": "code",
+            "title": "The Stoplight Class",
+            "language": "javascript",
+            "code": "class Stoplight {\n    constructor(stoplight) {\n        this.DOMObject = stoplight;\n        this.redLight = stoplight.querySelector('.red-stoplight');\n        this.yellowLight = stoplight.querySelector('.yellow-stoplight');\n        this.greenLight = stoplight.querySelector('.green-stoplight');\n    }\n\n    static {\n        this.activeLight = 'red';\n    }\n\n    async setRed() {\n        this.greenLight.classList.remove('active');\n        if (this.yellowLight) this.yellowLight.classList.add('active');\n        this.activeLight = 'yellow';\n        if (this.yellowLight) await delay(1500)\n        if (this.yellowLight) this.yellowLight.classList.remove('active');\n        this.redLight.classList.add('active');\n        this.activeLight = 'red'\n    }\n\n    async setGreen() {\n        if (this.yellowLight) this.yellowLight.classList.add('active');\n        this.activeLight = 'yellow';\n        await delay(1500)\n        this.redLight.classList.remove('active');\n        if (this.yellowLight) this.yellowLight.classList.remove('active');\n        this.greenLight.classList.add('active');\n        this.activeLight = 'green'\n    }\n\n    requestSignal() {\n        this.pedestrianButton.classList.add('active');\n    }\n\n    async requestGreen() {\n        const active = this.pedestrianButton.classList.contains('active');\n        if (active) {\n            this.pedestrianButton.classList.remove('active');\n            await this.setGreen();\n        }\n    }\n\n    bindButton(button) {\n        this.pedestrianButton = button;\n        button.addEventListener('click', () => {\n            this.requestSignal()\n        })\n    }\n}",
+            "text": "All Stoplights are built using this class which saves the HTML elements for the the red light, yellow light (if present) and green light. Further the functions can change the colors of the stoplight."
+        },
+        {
+            "type": "img",
+            "title": "Stoplights",
+            "src": "/stoplights.PNG",
+            "caption": "Stoplights and pedestrian stoplights"
+        },
+        {
+            "type": "list",
+            "title": "What Did I Learn?",
+            "list": [
+                "Classes in Javascript",
+                "CSS Grid",
+                "async functions",
+                "setTimeout & setInterval"
+            ]
+        }
+    ],
+    "technologies": ["html", "css", "js"],
+    "tools": ["vscode"],
+    "tags": ["js", "small", "finished"],
+    "buttons": {
+        "project": "https://projects.fabian-kleine.dev/stoplights/",
+        "github": "https://github.com/Fabian-Kleine/stoplights"
+    }
+}
