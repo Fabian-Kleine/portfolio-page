@@ -134,7 +134,7 @@ const Projects = () => {
                                 <button onClick={handleFilterApply} className="tracking-tight w-full sm:w-fit px-8 py-1 transition-all border-2 rounded-md border-[#f72585] text-[#f72585] hover:shadow-[0_0_35px_-3px_#f72585] hover:bg-[#f72585] hover:text-white">Apply</button>
                             </div>
                         </div>
-                        <span className="ml-2 text-lg"><b>{filteredProjects.length}</b> {filteredProjects.length != 1 ? "Projects" : "Project"}</span>
+                        <span className="ml-2 text-lg"><b>{filteredProjects.length == projects.length ? projects.length : `${filteredProjects.length} / ${projects.length}`}</b> Projects</span>
                     </div>
                     {filteredProjects.map((project, i) =>
                         <div key={i} className="bg-[#242424] mb-4 bg-opacity-60 border-[#242424] border-2 w-full xl:w-1/2 rounded-md p-2">
