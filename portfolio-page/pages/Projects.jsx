@@ -158,11 +158,11 @@ const Projects = () => {
                         <span className="ml-2 text-lg"><b>{filteredProjects.length == projects.length ? projects.length : `${filteredProjects.length} / ${projects.length}`}</b> Projects</span>
                     </OutsideAlerter>
                     {projects.length != filteredProjects.length && (
-                        <div className="flex justify-left items-center w-full xl:w-1/2 mb-4">
+                        <div className="flex justify-left items-center flex-wrap w-full xl:w-1/2 mb-4">
                             <span className="text-lg">Applied Filters:</span>
                             {
                                 filter.lang.concat(filter.size.concat(filter.status)).map((f, i) =>
-                                    <div key={i} className="flex items-center justify-center bg-[#242424] bg-opacity-60 border-[#242424] border-2 rounded-md p-2 font-bold ml-2 uppercase">{f} <button aria-label={`Remove Filter ${f}`} title={`Remove Filter ${f}`} onClick={() => removeFromFilter(f)}><X className="h-5 ml-1" /></button></div>
+                                    <div key={i} className="flex items-center justify-center bg-[#242424] bg-opacity-60 border-[#242424] border-2 rounded-md p-2 font-bold ml-2 mb-1 uppercase">{f} <button aria-label={`Remove Filter ${f}`} title={`Remove Filter ${f}`} onClick={() => removeFromFilter(f)}><X className="h-5 ml-1" /></button></div>
                                 )
                             }
                         </div>
