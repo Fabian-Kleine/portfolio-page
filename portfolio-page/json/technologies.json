@@ -125,5 +125,11 @@
         "name": "PostCSS",
         "color": "#DD3A0A",
         "hover": "#DD3A0A"
+    },
+    "daisyui": {
+        "icon": "/technologie-icons/daisyui.png",
+        "name": "",
+        "color": "#1AD1A5",
+        "hover": "#1AD1A5"
     }
 }
