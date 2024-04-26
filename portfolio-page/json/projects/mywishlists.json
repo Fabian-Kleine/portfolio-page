@@ -1,0 +1,49 @@
+{
+    "title": "My Wishlists",
+    "filename": "mywishlists",
+    "overview": "The My Wishlists Website lets you create and edit custom wishlists with attached links to products. Further other users can visit the wishlist with the shareable link and mark products as purchased in realtime.",
+    "content": [
+        {
+            "type": "list",
+            "title": "Core Features",
+            "list": [
+                "create and update wishlists (title, description, deadline)",
+                "add wishes/products to your wishlist (link, title, annotation, price)",
+                "share your wishlist with a public link",
+                "live counter for wishlist deadline",
+                "mark products as purchased in realtime",
+                "credentials login using supabase"
+            ]
+        },
+        {
+            "type": "text",
+            "title": "Scraping Data from webshops",
+            "text": "Data like prices, product titles and images can be scraped from some selected stores which are defined <a href='https://github.com/Fabian-Kleine/MyWishlists/blob/main/app/api/getProduct/webshops.js' target='_blank' class='underline font-bold'>here</a>. They are scraped with cheerio and by using the querys specified in <a href='https://github.com/Fabian-Kleine/MyWishlists/blob/main/app/api/getProduct/webshops.js' target='_blank' class='underline font-bold'><i>webshops.js</i></a>"
+        },
+        {
+            "type": "code",
+            "language": "javascript",
+            "code": "import { NextResponse } from 'next/server';\nimport axios from 'axios';\nimport cheerio from 'cheerio';\nimport webshops from './webshops';\n\nexport async function POST(req) {\n    const body = await req.json();\n    if (!body.link) {\n        return NextResponse.json({\n            title: body.title,\n            price: body.price,\n            image: null,\n            link: body.link\n        });\n    }\n\n    const url = new URL(body.link);\n    const domainname = url.hostname.replace(/(www\\.)?/, '').split('.')[0];\n\n    if (webshops.some(shop => shop.hostname === domainname)) {\n        try {\n            const webshopdata = webshops.find((webshop) => {\n                return webshop.hostname == domainname;\n            });\n            const webpage = await axios.get(url);\n            const $ = cheerio.load(webpage.data);\n            let image = $(webshopdata.imageQuery).first().attr('src');\n            if (webshopdata.sourceImage) image = $(webshopdata.imageQuery).first().attr('srcset');\n            const title = !body.title ? $(webshopdata.titleQuery).first().text().trim() : body.title;\n            let price = !body.price ? $(webshopdata.priceQuery).first().text().trim() : body.price;\n            if (webshopdata.composedPrice && price != body.price) {\n                price = price + $(webshopdata.priceQuery2).first().text();\n            }\n            if (webshopdata.replacePriceText && price != body.price) {\n                price = price.replace(/[^0-9,]/g, '').trim();\n            }\n            if (webshopdata.affiliateID) {\n                url.hash = '';\n                url.search = `?tag=${webshopdata.affiliateID}`;\n            }\n            return NextResponse.json({\n                title,\n                image,\n                price,\n                link: url.href\n            });\n        } catch {\n            return NextResponse.json({\n                title: body.title,\n                price: body.price,\n                image: null,\n                link: body.link\n            });\n        }\n    }\n\n    return NextResponse.json({\n        title: body.title,\n        price: body.price,\n        image: null,\n        link: body.link\n    });\n}"
+        },
+        {
+            "type": "text",
+            "text": "Further an affiliate ID is added for amazon (more shops will be added in the future)."
+        },
+        {
+            "type": "list",
+            "title": "What Did I Learn?",
+            "list": [
+                "Supabase",
+                "NEXT.JS",
+                "client- and serverside rendering"
+            ]
+        }
+    ],
+    "technologies": ["html", "css", "js", "next", "supabase", "tailwindcss"],
+    "tools": ["daisyui", "vscode"],
+    "tags": ["js", "medium", "finished"],
+    "buttons": {
+        "project": "https://mywishlists.fabian-kleine.dev",
+        "github": "https://github.com/Fabian-Kleine/MyWishlists"
+    }
+}

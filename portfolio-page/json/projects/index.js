@@ -8,8 +8,9 @@ import Oleon from "./product-filter.json";
 import Steam from "./steam-inspired-ui.json";
 import CDN from "./cdn-server.json";
 import FileConverter from "./file-converter.json";
-import Stoplights from "./stoplights.json"
+import Stoplights from "./stoplights.json";
+import MyWishlists from "./mywishlists.json"
 
-const projects = [Stoplights, FileConverter, CDN, Steam, Oleon, CollatzConjectureR, RheinWaalEvents, Fivem, CollatzConjecture, R6CreativeHub, PortfolioPage];
+const projects = [MyWishlists, Stoplights, FileConverter, CDN, Steam, Oleon, CollatzConjectureR, RheinWaalEvents, Fivem, CollatzConjecture, R6CreativeHub, PortfolioPage];
 
 export default projects;
