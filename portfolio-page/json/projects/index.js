@@ -9,8 +9,9 @@ import Steam from "./steam-inspired-ui.json";
 import CDN from "./cdn-server.json";
 import FileConverter from "./file-converter.json";
 import Stoplights from "./stoplights.json";
-import MyWishlists from "./mywishlists.json"
+import MyWishlists from "./mywishlists.json";
+import Cerberusui from "./cerberusui.json"
 
-const projects = [MyWishlists, Stoplights, FileConverter, CDN, Steam, Oleon, CollatzConjectureR, RheinWaalEvents, Fivem, CollatzConjecture, R6CreativeHub, PortfolioPage];
+const projects = [Cerberusui, MyWishlists, Stoplights, FileConverter, CDN, Steam, Oleon, CollatzConjectureR, RheinWaalEvents, Fivem, CollatzConjecture, R6CreativeHub, PortfolioPage];
 
 export default projects;
