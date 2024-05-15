@@ -137,5 +137,11 @@
         "name": "",
         "color": "#1AD1A5",
         "hover": "#1AD1A5"
+    },
+    "storybook": {
+        "icon": "/technologie-icons/storybook.png",
+        "name": "storybook",
+        "color": "#FF4586",
+        "hover": "#FF4586"
     }
 }
