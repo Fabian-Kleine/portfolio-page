@@ -126,6 +126,19 @@ const Projects = () => {
                                     id="js" />
                             </div>
                             <div className="flex flex-row-reverse items-center justify-end mb-1">
+                                <label className="flex items-center" htmlFor="ts">
+                                    <img src="/technologie-icons/icons8-typescript.svg" alt="TypeScript" className="inline h-5 mr-1" />
+                                    TypeScript
+                                    <span className="ml-1 text-white/50 font-normal">({projects.filter(project => project.tags.includes("ts")).length})</span>
+                                </label>
+                                <input
+                                    onChange={(e) => e.target.checked ? setFilter({ ...filter, lang: [...filter.lang, "ts"] }) : setFilter({ ...filter, lang: filter.lang.filter((f) => { return f != "ts" }) })}
+                                    className="filter-input mr-2 h-4 w-4"
+                                    type="checkbox"
+                                    name="ts"
+                                    id="ts" />
+                            </div>
+                            <div className="flex flex-row-reverse items-center justify-end mb-1">
                                 <label className="flex items-center" htmlFor="python">
                                     <img src="/technologie-icons/icons8-python.svg" alt="Python" className="inline h-5 mr-1" />
                                     Python

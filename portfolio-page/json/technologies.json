@@ -77,6 +77,12 @@
         "color": "#1B67BB",
         "hover": "#1B67BB"
     },
+    "typescript": {
+        "icon": "/technologie-icons/icons8-typescript.svg",
+        "name": "TypeScript",
+        "color": "#1976D2",
+        "hover": "#1976D2"
+    },
 
     "vscode":{
         "icon": "/technologie-icons/icons8-vscode.svg",
