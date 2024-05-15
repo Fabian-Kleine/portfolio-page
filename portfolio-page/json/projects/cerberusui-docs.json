@@ -1,0 +1,10 @@
+{
+    "title": "Cerberusui Docs",
+    "has_no_project_page": true,
+    "technologies": ["html", "css", "js", "next", "nextra", "mdx", "tailwindcss"],
+    "tags": ["js", "wip", "small"],
+    "buttons": {
+        "project": "https://cerberusui.fabian-kleine.dev/",
+        "github": "https://github.com/Fabian-Kleine/cerberusui-docs"
+    }
+}

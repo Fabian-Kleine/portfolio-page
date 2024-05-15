@@ -10,8 +10,9 @@ import CDN from "./cdn-server.json";
 import FileConverter from "./file-converter.json";
 import Stoplights from "./stoplights.json";
 import MyWishlists from "./mywishlists.json";
-import Cerberusui from "./cerberusui.json"
+import Cerberusui from "./cerberusui.json";
+import CerberusuiDocs from "./cerberusui-docs.json"
 
-const projects = [Cerberusui, MyWishlists, Stoplights, FileConverter, CDN, Steam, Oleon, CollatzConjectureR, RheinWaalEvents, Fivem, CollatzConjecture, R6CreativeHub, PortfolioPage];
+const projects = [CerberusuiDocs, Cerberusui, MyWishlists, Stoplights, FileConverter, CDN, Steam, Oleon, CollatzConjectureR, RheinWaalEvents, Fivem, CollatzConjecture, R6CreativeHub, PortfolioPage];
 
 export default projects;
