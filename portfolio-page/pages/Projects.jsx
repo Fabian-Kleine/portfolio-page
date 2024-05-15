@@ -182,7 +182,7 @@ const Projects = () => {
                     )}
                     {filteredProjects.map((project, i) =>
                         <div key={i} className="bg-[#242424] mb-4 bg-opacity-60 border-[#242424] border-2 w-full xl:w-1/2 rounded-md p-2">
-                            <a aria-label={project.has_no_project_page ? "Click to read more" : ""} title={project.has_no_project_page ? "Click to read more" : ""} href={!project.has_no_project_page ? ("/project/" + project.filename) : "javascript:void"} className={project.has_no_project_page ? "cursor-default": ""}>
+                            <a aria-label={!project.has_no_project_page ? "Click to read more" : ""} title={!project.has_no_project_page ? "Click to read more" : ""} href={!project.has_no_project_page ? ("/project/" + project.filename) : "javascript:void"} className={project.has_no_project_page ? "cursor-default": ""}>
                                 <h2 className="text-left px-2 pt-2 font-bold text-2xl line-clamp-1">{project.title}{project.tags.includes("wip") && (<span className={"inline-flex items-center cursor-default text-sm font-bold px-2 ml-2 mb-2 rounded-xl border-2"}><Hammer className="inline h-4" />W.I.P.</span>)}</h2>
                                 <div className="flex flex-wrap px-2 my-2 xl:my-0">
                                     <TechnologieBadge technologies={project.technologies} type={"badge"} />
