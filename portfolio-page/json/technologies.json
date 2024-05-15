@@ -149,5 +149,11 @@
         "name": "",
         "color": "#2F2F2F",
         "hover": "#E7E7E7" 
+    },
+    "mdx": {
+        "icon": "/technologie-icons/MDX.png",
+        "name": "MDX",
+        "color": "#F9AC00",
+        "hover": "#F9AC00" 
     }
 }
