@@ -143,5 +143,11 @@
         "name": "storybook",
         "color": "#FF4586",
         "hover": "#FF4586"
+    },
+    "nextra": {
+        "icon": "/technologie-icons/nextra.svg",
+        "name": "",
+        "color": "#2F2F2F",
+        "hover": "#E7E7E7" 
     }
 }
