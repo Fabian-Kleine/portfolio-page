@@ -1,7 +1,7 @@
 import React from "react";
 import TechnologieBadge from "../components/TechnologieBadge";
 import projects from "../json/projects/";
-import { Hammer } from "lucide-react";
+import { Hammer, Link, FlaskConical, Github } from "lucide-react";
 
 const Home = () => {
 
@@ -32,15 +32,28 @@ const Home = () => {
                     <div>
                         <h3 className="text-left mb-12 text-xl md:text-2xl 2xl:text-3xl leading-20 font-bold">Random Project</h3>
                         <div className="bg-[#242424] mb-4 bg-opacity-60 border-[#242424] border-2 w-full rounded-md p-2">
-                            <a href={"/project/" + project.filename}>
+                            <a aria-label={!project.has_no_project_page ? "Click to read more" : ""} title={!project.has_no_project_page ? "Click to read more" : ""} href={!project.has_no_project_page ? ("/project/" + project.filename) : "javascript:void"} className={project.has_no_project_page ? "cursor-default": ""}>
                                 <h2 className="text-left px-2 pt-2 font-bold text-2xl line-clamp-1">{project.title}{project.tags.includes("wip") && (<span className={"inline-flex items-center cursor-default text-sm font-bold px-2 ml-2 mb-2 rounded-xl border-2"}><Hammer className="inline h-4" />W.I.P.</span>)}</h2>
                                 <div className="flex flex-wrap px-2 my-2 xl:my-0">
                                     <TechnologieBadge technologies={project.technologies} type={"badge"} />
                                 </div>
-                                <p dangerouslySetInnerHTML={{__html: project.overview}} className="text-left text-white/50 line-clamp-2 px-2 max-w-2xl">
-                                    
-                                </p>
-                                <span className="block px-2 text-left text-[#1e96fc] font-bold">Read more...</span>
+                                {!project.has_no_project_page ?
+                                    <>
+                                        <p dangerouslySetInnerHTML={{ __html: project.overview }} className="text-left text-white/50 line-clamp-2 px-2 max-w-2xl">
+                                        </p>
+                                        <span className="block px-2 text-left text-[#1e96fc] font-bold">Read more...</span>
+                                    </>
+                                    : <div className="flex justify-start">
+                                        {project.buttons.project && (
+                                            <a className="max-[320px]:px-4 text-sm md:text-base tracking-tight px-6 py-2 mx-2 uppercase transition-all border-2 rounded-md border-[#f72585] text-[#f72585] hover:shadow-[0_0_35px_-3px_#f72585] hover:bg-[#f72585] hover:text-white inline-flex items-center" href={project.buttons.project} target="_blank"><Link className="inline mr-2" />Project Link</a>
+                                        )}
+                                        {project.buttons.demo && (
+                                            <a className="max-[320px]:px-4 text-sm md:text-base tracking-tight px-6 py-2 mx-2 uppercase transition-all border-2 rounded-md border-[#f72585] text-[#f72585] hover:shadow-[0_0_35px_-3px_#f72585] hover:bg-[#f72585] hover:text-white inline-flex items-center" href={project.buttons.demo} target="_blank"><FlaskConical className="inline mr-2" />Demo Link</a>
+                                        )}
+                                        {project.buttons.github && (
+                                            <a className="max-[320px]:px-4 text-sm md:text-base tracking-tight px-6 py-2 mx-2 uppercase transition-all border-2 rounded-md border-[#ffd60a] text-[#ffd60a] hover:shadow-[0_0_35px_-3px_#ffd60a] hover:bg-[#ffd60a] hover:text-white inline-flex items-center" href={project.buttons.github} target="_blank"><Github className="inline mr-2" />GitHub</a>
+                                        )}
+                                </div>}
                             </a>
                         </div>
                     </div>
