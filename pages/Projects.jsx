@@ -2,7 +2,7 @@ import React from "react";
 import TechnologieBadge from "../components/TechnologieBadge";
 import OutsideAlerter from "../components/OutsideAlerter";
 import projects from "../json/projects/";
-import { Filter, Hammer, ShieldCheck, X, FlaskConical, Link, Github } from "lucide-react";
+import { Filter, Hammer, ShieldCheck, X, FlaskConical, Link, Github, PauseOctagon } from "lucide-react";
 import { useState, useEffect } from "react";
 
 
@@ -82,6 +82,15 @@ const Projects = () => {
                                     type="checkbox"
                                     name="wip"
                                     id="wip" />
+                            </div>
+                            <div className="flex flex-row-reverse items-center justify-end mb-1">
+                                <label htmlFor="pause"><PauseOctagon className="inline mr-1" />Canceled or Paused <span className="text-white/50 font-normal">({projects.filter(project => project.tags.includes("pause")).length})</span></label>
+                                <input
+                                    onChange={(e) => e.target.checked ? setFilter({ ...filter, status: [...filter.status, "pause"] }) : setFilter({ ...filter, status: filter.status.filter((f) => { return f != "pause" }) })}
+                                    className="filter-input mr-2 h-4 w-4"
+                                    type="checkbox"
+                                    name="pause"
+                                    id="pause" />
                             </div>
                             <h4 className="text-white/50 text-left mt-2 border-b border-white/50">Project Size</h4>
                             <div className="flex flex-row-reverse items-center justify-end mb-1">
@@ -183,7 +192,7 @@ const Projects = () => {
                     {filteredProjects.map((project, i) =>
                         <div key={i} className="bg-[#242424] mb-4 bg-opacity-60 border-[#242424] border-2 w-full xl:w-1/2 rounded-md p-2">
                             <a aria-label={!project.has_no_project_page ? "Click to read more" : ""} title={!project.has_no_project_page ? "Click to read more" : ""} href={!project.has_no_project_page ? ("/project/" + project.filename) : "javascript:void"} className={project.has_no_project_page ? "cursor-default": ""}>
-                                <h2 className="text-left px-2 pt-2 font-bold text-2xl line-clamp-1">{project.title}{project.tags.includes("wip") && (<span className={"inline-flex items-center cursor-default text-sm font-bold px-2 ml-2 mb-2 rounded-xl border-2"}><Hammer className="inline h-4" />W.I.P.</span>)}</h2>
+                                <h2 className="text-left px-2 pt-2 font-bold text-2xl line-clamp-1">{project.title}{project.tags.includes("wip") && (<span className={"inline-flex items-center cursor-default text-sm font-bold px-2 ml-2 mb-2 rounded-xl border-2"}><Hammer className="inline h-4" />W.I.P.</span>)}{project.tags.includes("pause") && (<span className={"inline-flex items-center cursor-default text-sm font-bold px-2 ml-2 mb-2 rounded-xl border-2"}><PauseOctagon className="inline h-4" />Canceled or Paused</span>)}</h2>
                                 <div className="flex flex-wrap px-2 my-2 xl:my-0">
                                     <TechnologieBadge technologies={project.technologies} type={"badge"} />
                                 </div>
