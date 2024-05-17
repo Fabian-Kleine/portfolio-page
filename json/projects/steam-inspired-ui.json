@@ -32,7 +32,7 @@
     ],
     "technologies": ["html", "css", "js"],
     "tools": ["vscode"],
-    "tags": ["js", "small", "wip"],
+    "tags": ["js", "small", "pause"],
     "buttons": {
         "demo": "https://projects.fabian-kleine.dev/steam-inspired-ui-library/",
         "github": "https://github.com/Fabian-Kleine/steam-inspired-ui-library"

@@ -34,7 +34,7 @@
     ],
     "technologies": ["html", "css", "js", "next", "supabase", "tailwindcss"],
     "tools": ["vscode"],
-    "tags": ["js", "medium", "wip"],
+    "tags": ["js", "medium", "pause"],
     "buttons": {
         "demo": "https://oleon-product-filter.vercel.app/"
     }
