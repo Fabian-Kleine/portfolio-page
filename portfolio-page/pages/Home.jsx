@@ -60,7 +60,7 @@ const Home = () => {
                     <div>
                         <h3 className="text-left mb-12 text-xl md:text-2xl 2xl:text-3xl leading-20 font-bold">Skills & Technologies</h3>
                         <div className="flex flex-wrap">
-                            <TechnologieBadge technologies={["html", "css", "js", "node", "react", "next", "MongoDB", "tailwindcss", "python"]} type={"default"} />
+                            <TechnologieBadge technologies={["html", "css", "js", "typescript", "node", "react", "next", "MongoDB", "tailwindcss", "python"]} type={"default"} />
                         </div>
                     </div>
                 </div>
