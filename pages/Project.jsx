@@ -40,6 +40,9 @@ const Project = () => {
                     {projectData.tags.includes("wip") && (
                         <p className="mx-8 mt-4 text-center text-base md:text-lg 2xl:text-xl leading-7 capitalize font-bold">This project is currently under development</p>
                     )}
+                    {projectData.tags.includes("pause") && (
+                        <p className="mx-8 mt-4 text-center text-base md:text-lg 2xl:text-xl leading-7 capitalize font-bold">This project is canceled or currently paused</p>
+                    )}
                     <p className="mx-8 mt-12 text-center text-lg md:text-xl 2xl:text-2xl leading-7">This page contains everything about the Project <b>{projectData.title}</b> which includes the Project Overview, Tools Used, Code Examples, What I Learned From It and more</p>
                     <div className="relative top-10">
                         {projectData.buttons.project && (
