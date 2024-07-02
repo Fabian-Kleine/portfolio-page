@@ -12,7 +12,8 @@ import Stoplights from "./stoplights.json";
 import MyWishlists from "./mywishlists.json";
 import Cerberusui from "./cerberusui.json";
 import CerberusuiDocs from "./cerberusui-docs.json"
+import IsMyAppOnline from "./ismyapponline.json"
 
-const projects = [CerberusuiDocs, Cerberusui, MyWishlists, Stoplights, FileConverter, CDN, Steam, Oleon, CollatzConjectureR, RheinWaalEvents, Fivem, CollatzConjecture, R6CreativeHub, PortfolioPage];
+const projects = [IsMyAppOnline, CerberusuiDocs, Cerberusui, MyWishlists, Stoplights, FileConverter, CDN, Steam, Oleon, CollatzConjectureR, RheinWaalEvents, Fivem, CollatzConjecture, R6CreativeHub, PortfolioPage];
 
 export default projects;

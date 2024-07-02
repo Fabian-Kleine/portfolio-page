@@ -1,0 +1,46 @@
+{
+    "title": "IsMyAppOnline",
+    "filename": "ismyapponline",
+    "overview": "IsMyAppOnline is an easy and fast tool to provide customers or internals with the service status of your apps. It has an API Endpoint that can detect if a server is down or has an internal error (500).<br>Further a service status page can be created without knowing how to code using the <a class='underline font-bold' href='https://ismyapponline.vercel.app/tools/site-generator' target='_blank'>Site Genrator</a>.",
+    "content": [
+        {
+            "type": "text",
+            "title": "The Site Genrator",
+            "text": "The Site Generator can be used to create service status pages that display the status of multiple services very quickly and without coding knowledge.<br>On the left side you specify the details of the page including the URLs the API should monitor and on the right side you see a preview of the generated page."
+        },
+        {
+            "type": "img",
+            "src": "/ismyapponline/site-generator.png"
+        },
+        {
+            "type": "text",
+            "text": "When pressing <i>Download Files</i> the page is generated and zipped using the package <i>archiver</i> like this:"
+        },
+        {
+            "type": "code",
+            "language": "javascript",
+            "code": "import { NextResponse } from 'next/server';\nimport template from './template';\nimport fs from 'fs';\nimport path from 'path';\nimport archiver from 'archiver';\nimport { PassThrough } from 'stream';\n\nexport async function POST(req) {\n    try {\n        const body = await req.json();\n        const hasLogo = body.logoFile != '';\n    \n        const scriptPath = path.join(process.cwd(), 'public', 'script.min.js');\n        const js = fs.readFileSync(scriptPath, 'utf-8');\n    \n        let imageData = '';\n        if (hasLogo) imageData = decodeDataUrl(body.logoFile);\n    \n        const html = template(body.heading, body.text, imageData.filename, hasLogo, body.apps);\n    \n        const { logoFile, ...newBody } = body;\n        const jsonData = {apihost: process.env.HOST, ...newBody};\n        const json = JSON.stringify(jsonData);\n    \n        const zip = archiver('zip', {\n            zlib: { level: 9 }\n        });\n    \n        const zipStream = new PassThrough();\n        zip.pipe(zipStream);\n    \n        zip.append(html, { name: 'index.html' });\n        zip.append(js, { name: 'script.min.js' });\n        zip.append(json, { name: 'data.json' });\n        if (hasLogo) zip.append(imageData.buffer, { name: imageData.filename });\n    \n        await zip.finalize();\n    \n        const zipBuffer = await new Promise((resolve, reject) => {\n            const chunks = [];\n            zipStream.on('data', chunk => chunks.push(chunk));\n            zipStream.on('end', () => resolve(Buffer.concat(chunks)));\n            zipStream.on('error', err => reject(err));\n        });\n    \n        return new NextResponse(zipBuffer, {\n            headers: {\n                'Content-Type': 'application/zip',\n                'Content-Disposition': `attachment; filename='${body.heading}.zip'`,\n            }\n        });\n    } catch (error) {\n        return NextResponse.json({ ok: false })\n    }\n}\n\nfunction decodeDataUrl(dataUrl) {\n    const matches = dataUrl.match(/^data:([A-Za-z-+/]+);base64,(.+)$/);\n    if (!matches || matches.length !== 3) {\n      throw new Error('Invalid data URL');\n    }\n    return {\n      mime: matches[1],\n      buffer: Buffer.from(matches[2], 'base64'),\n      filename: `logo.${matches[1].replace('image/', '')}`\n    };\n}",
+            "caption": "API Endpoint for downloading the generated page as a zip file"
+        },
+        {
+            "type": "text",
+            "title": "The Documentation",
+            "text": "The documentation is generated using MDX and the packages <i>rehype-highlight</i> and <i>rehype-slug</i> to highlight the code and add a slug link to the headings."
+        },
+        {
+            "type": "list",
+            "title": "What Did I Learn?",
+            "list": [
+                "NEXT.JS",
+                "Using MDX in Next.js",
+                "How to zip files and send them to the client"
+            ]
+        }
+    ],
+    "technologies": ["html", "css", "js", "next", "mdx", "tailwindcss"],
+    "tools": ["shadcn", "vscode"],
+    "tags": ["js", "medium", "finished"],
+    "buttons": {
+        "project": "https://ismyapponline.vercel.app/"
+    }
+}
