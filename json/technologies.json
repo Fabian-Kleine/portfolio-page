@@ -35,6 +35,12 @@
         "color": "#2F2F2F",
         "hover": "#E7E7E7" 
     },
+    "vue":{
+        "icon": "/technologie-icons/icons8-vue.png",
+        "name": "Vue",
+        "color": "#41B883",
+        "hover": "#41B883" 
+    },
     "MongoDB":{
         "icon": "/technologie-icons/icons8-mongodb.png",
         "name": "MongoDB",
