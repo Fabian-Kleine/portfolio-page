@@ -13,7 +13,8 @@ import MyWishlists from "./mywishlists.json";
 import Cerberusui from "./cerberusui.json";
 import CerberusuiDocs from "./cerberusui-docs.json"
 import IsMyAppOnline from "./ismyapponline.json"
+import MockupCreator from "./mockup-creator.json"
 
-const projects = [IsMyAppOnline, CerberusuiDocs, Cerberusui, MyWishlists, Stoplights, FileConverter, CDN, Steam, Oleon, CollatzConjectureR, RheinWaalEvents, Fivem, CollatzConjecture, R6CreativeHub, PortfolioPage];
+const projects = [MockupCreator, IsMyAppOnline, CerberusuiDocs, Cerberusui, MyWishlists, Stoplights, FileConverter, CDN, Steam, Oleon, CollatzConjectureR, RheinWaalEvents, Fivem, CollatzConjecture, R6CreativeHub, PortfolioPage];
 
 export default projects;

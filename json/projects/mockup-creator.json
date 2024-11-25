@@ -1,0 +1,35 @@
+{
+    "title": "Mockup Creator",
+    "filename": "mockup-creator",
+    "overview": "This webapp is made with Vue.js and TailwindCSS and features an easy to use mockup creator. <br> There are many mockups to choose from like social media posts and phones or other devices. <br> The mockups can be exported as PNG.",
+    "content": [
+        {
+            "type": "text",
+            "title": "Usage",
+            "text": "Select a mockup from the start page and start creating your mockup. Edit to your liking with the provided tools. <br> Afterwards you can export the mockup as a PNG file."
+        },
+        {
+            "type": "img",
+            "title": "Example Mockup",
+            "src": "https://projects.fabian-kleine.dev/mockup-creator/hero.png",
+            "caption": "Example Browser Mockup"
+        },
+        {
+            "type": "img",
+            "title": "Mockup Editor",
+            "src": "/mockup-creator/mockup-creator-editor.PNG",
+            "caption": "Browser Mockup Editor"
+        },
+        {
+            "type": "img",
+            "src": "/mockup-creator/mockup-creator-instagram-editor.PNG",
+            "caption": "Instagram Editor"
+        }
+    ],
+    "technologies": ["html", "css", "js", "vue", "tailwindcss"],
+    "tools": ["vscode", "vite"],
+    "tags": ["js", "small", "finished"],
+    "buttons": {
+        "project": "https://projects.fabian-kleine.dev/mockup-creator/"
+    }
+}
