@@ -14,7 +14,8 @@ import Cerberusui from "./cerberusui.json";
 import CerberusuiDocs from "./cerberusui-docs.json"
 import IsMyAppOnline from "./ismyapponline.json"
 import MockupCreator from "./mockup-creator.json"
+import Postrocket from "./postrocket.json"
 
-const projects = [MockupCreator, IsMyAppOnline, CerberusuiDocs, Cerberusui, MyWishlists, Stoplights, FileConverter, CDN, Steam, Oleon, CollatzConjectureR, RheinWaalEvents, Fivem, CollatzConjecture, R6CreativeHub, PortfolioPage];
+const projects = [MockupCreator, Postrocket, IsMyAppOnline, CerberusuiDocs, Cerberusui, MyWishlists, Stoplights, FileConverter, CDN, Steam, Oleon, CollatzConjectureR, RheinWaalEvents, Fivem, CollatzConjecture, R6CreativeHub, PortfolioPage];
 
 export default projects;

@@ -1,0 +1,18 @@
+{
+    "title": "Postrocket",
+    "filename": "postrocket",
+    "overview": "Postrocket is a small Postman clone made with Vue.js and TailwindCSS.",
+    "content": [
+        {
+            "type": "img",
+            "src": "/postrocket.PNG",
+            "caption": "<a class='underline' href='https://projects.fabian-kleine.dev/postrocket/' target='_blank'>Postrocket</a>"
+        }
+    ],
+    "technologies": ["html", "css", "js", "vue", "tailwindcss"],
+    "tools": ["vscode", "vite"],
+    "tags": ["js", "small", "finished"],
+    "buttons": {
+        "project": "https://projects.fabian-kleine.dev/postrocket/"
+    }
+}
