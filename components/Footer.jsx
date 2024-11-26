@@ -6,7 +6,7 @@ const Footer = () => {
             <div className="w-full sm:max-w-[80rem] sm:w-[92%] m-auto">
                 <div className="w-full sm:w-2/5 sm:max-w-[50rem]">
                     <h2 className="text-left font-bold text-xl xs:text-2xl uppercase tracking-widest">Fabian Kleine</h2>
-                    <p className="text-left mt-4 text-sm md:text-base 2xl:text-lg leading-7 sm:max-w-[55rem] mb-4">I'm a student and selftaught Programmer focusing on web development but also interested to learn more</p>
+                    <p className="text-left mt-4 text-sm md:text-base 2xl:text-lg leading-7 sm:max-w-[55rem] mb-4">I'm an apprentice and selftaught Programmer focusing on web development</p>
                 </div>
                 <div className="py-6 border-t-2 border-gray-700 text-center text-sm">
                     © Copyright {new Date().getFullYear()}. Made by <a href="/" className="underline cursor-pointer font-bold">Fabian Kleine</a>

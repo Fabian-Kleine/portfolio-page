@@ -13,7 +13,7 @@ const Home = () => {
             <div className="relative h-[90vh] bg-pattern z-0">
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full xl:w-fit 2xl:max-w-7xl">
                     <h1 className="text-4xl md:text-5xl 2xl:text-6xl leading-20 font-extrabold tracking-wider uppercase">Hi, I'm <span className="text-gradient">Fabian Kleine</span></h1>
-                    <p className="mx-8 mt-12 text-center text-sm xs:text-lg md:text-xl 2xl:text-2xl leading-7">I'm a student and selftaught Programmer focusing on web development but also interested to learn more</p>
+                    <p className="mx-8 mt-12 text-center text-sm xs:text-lg md:text-xl 2xl:text-2xl leading-7">I'm an apprentice and selftaught Programmer focusing on web development</p>
                     <div className="flex justify-center mt-12">
                         <a href="/projects" className="text-xl md:text-2xl 2xl:text-3xl tracking-tight px-16 py-4 uppercase transition-all border-2 rounded-md border-[#f72585] text-[#f72585] hover:shadow-[0_0_35px_-3px_#f72585] hover:bg-[#f72585] hover:text-white">Projects</a>
                     </div>
