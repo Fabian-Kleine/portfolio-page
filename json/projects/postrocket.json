@@ -9,9 +9,9 @@
             "caption": "<a class='underline' href='https://projects.fabian-kleine.dev/postrocket/' target='_blank'>Postrocket</a>"
         }
     ],
-    "technologies": ["html", "css", "js", "vue", "tailwindcss"],
+    "technologies": ["html", "css", "js", "typescript", "vue", "tailwindcss"],
     "tools": ["vscode", "vite"],
-    "tags": ["js", "small", "finished"],
+    "tags": ["js", "ts", "small", "finished"],
     "buttons": {
         "project": "https://projects.fabian-kleine.dev/postrocket/"
     }
