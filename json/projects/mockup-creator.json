@@ -30,6 +30,7 @@
     "tools": ["vscode", "vite"],
     "tags": ["js", "small", "finished"],
     "buttons": {
-        "project": "https://projects.fabian-kleine.dev/mockup-creator/"
+        "project": "https://projects.fabian-kleine.dev/mockup-creator/",
+        "github": "https://github.com/Fabian-Kleine/mockup-generator"
     }
 }
